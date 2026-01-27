@@ -1,8 +1,10 @@
-﻿using Application.Interfaces;
+﻿using Application.DTOs;
+using Application.Interfaces;
 using Application.Services;
+using FluentValidation;
 using Infrastructure.Auth;
 using Infrastructure.CrudRepository;
-
+using Application.DTOs.Validator;
 namespace API
 {
     public static class InterfaceRegistration
@@ -19,6 +21,7 @@ namespace API
             services.AddScoped<IProductInterface, ProductRepository>();
             // Jwt service
             services.AddScoped<JwtService>();
+            services.SetValidatorHandler();
             return services;
         }
     }
