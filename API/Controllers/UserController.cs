@@ -1,5 +1,6 @@
 ﻿using Application.DTOs;
 using Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -15,6 +16,7 @@ namespace API.Controllers
         }
         [HttpPost]
         [Route("changerole")]
+        [Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> UpdateUserRole([FromBody]UpdateUserRoleDto request)
         {
             await _userInterface.Update(request);

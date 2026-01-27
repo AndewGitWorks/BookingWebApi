@@ -1,3 +1,4 @@
+using API;
 using Application.Interfaces;
 using Application.Services;
 using Infrastructure.Auth;
@@ -13,11 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-builder.Services.AddScoped<IAuthInterface, AuthRepository>();
-builder.Services.AddScoped<IJwtInterface, JwtService>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IProductInterface, ProductRepository>();
-builder.Services.AddScoped<JwtService>();
+builder.Services.ServicesRegistration();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
