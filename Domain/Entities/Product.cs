@@ -21,5 +21,10 @@ namespace Domain.Entities
             }
             QuantityInStock -= amount;
         }
+        public decimal GetTotalPrice(int quantity)
+        {
+            return Price * quantity;
+        }
+        
     }
 }

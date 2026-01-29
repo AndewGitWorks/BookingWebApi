@@ -1,5 +1,6 @@
 ﻿using Application.DTOs;
 using Application.Interfaces;
+using Application.Interfaces.DbInterfaces;
 using Domain.Entities;
 using Infrastructure.Persistance;
 using Microsoft.AspNetCore.Identity;
@@ -10,50 +11,43 @@ using System.Text;
 
 namespace Infrastructure.CrudRepository
 {
-    public class UserRepository : IUserRepository
+    public class UserRepository : IUserDbInterface
     {
         private readonly ApplicationDbContext _context;
         public UserRepository(ApplicationDbContext context)
         {
             _context = context;
         }
-
-        public async Task<User> CreateUser(RegistrationRequestDto request)
+        public async Task AddUserAsync(User usr)
         {
-            var user = new User
-            {
-                Id = Guid.NewGuid(),
-                Email = request.Email,
-                CreatedAt = DateOnly.FromDateTime(DateTime.UtcNow),
-            };
-            var passHash = new PasswordHasher<User>().HashPassword(user, request.Password);
-            user.PasswordHash = passHash;
-            if (user != null)
-            {
-                _context.Users.Add(user);
-                await _context.SaveChangesAsync();
-                return user;
-            }
-            throw new Exception("User could not be created!");
-        }
-
-        public async Task<User> GetByEmail(string email)
-        {
-            return await _context.Users.FirstOrDefaultAsync(x => x.Email == email) ?? throw new Exception("Not Found!");
-        }
-
-        public async Task<User> GetById(Guid id)
-        {
-            var usr = await _context.Users.FirstOrDefaultAsync(x => x.Id == id);
-            return usr ?? throw new Exception("Not Found!");
-        }
-
-        public async Task Update(UpdateUserRoleDto request)
-        {
-            var usr = await _context.Users.FirstOrDefaultAsync(x => x.Email == request.Email) ?? throw new Exception("User not found");
-            usr.Role = request.Role;
-            _context.Users.Update(usr);
+            await _context.Users.AddAsync(usr);
             await _context.SaveChangesAsync();
+        }
+
+        public Task DeleteUserAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<User> GetByEmailAsync(string email)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Email == email) ?? throw new Exception("User not found");
+        }
+
+        public async Task<User> GetByIdAsync(Guid id)
+        {
+            return await _context.Users.FirstOrDefaultAsync(x => x.Id == id)
+                ?? throw new Exception("User not found");
+        }
+
+        public Task GetUserAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateUserAsync()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Application.DTOs;
 using Application.Interfaces;
+using Application.Interfaces.DbInterfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,18 +10,18 @@ namespace API.Controllers
     [Route("[controller]")]
     public class UserController
     {
-        private readonly IUserRepository _userInterface;
-        public UserController(IUserRepository repo)
+        private readonly IUserDbInterface _userInterface;
+        public UserController(IUserDbInterface repo)
         {
             _userInterface = repo;
         }
-        [HttpPost]
-        [Route("changerole")]
-        [Authorize(Policy = "AdminPolicy")]
-        public async Task<IActionResult> UpdateUserRole([FromBody]UpdateUserRoleDto request)
-        {
-            await _userInterface.Update(request);
-            return new OkResult();
-        }
+        //[HttpPost]
+        //[Route("changerole")]
+        //[Authorize(Policy = "AdminPolicy")]
+        //public async Task<IActionResult> UpdateUserRole([FromBody]UpdateUserRoleDto request)
+        //{
+        //    await _userInterface.UpdateAsync(request);
+        //    return new OkResult();
+        //}
     }
 }

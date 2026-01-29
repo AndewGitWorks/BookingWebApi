@@ -1,46 +1,56 @@
 ﻿using Application.DTOs;
 using Application.Interfaces;
+using Application.Interfaces.DbInterfaces;
 using Domain.Entities;
 using Infrastructure.Persistance;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace Infrastructure.CrudRepository
 {
-    public class ProductRepository : IProductInterface
+    public class ProductRepository : IProductDbInteface
     {
         private readonly ApplicationDbContext _context;
         public ProductRepository(ApplicationDbContext context)
         {
             _context = context;
         }
-        public async Task<bool> CreateProduct(CreateProductDto request)
+        public async Task AddProductAsync(Product product)
         {
-            var product = new Product
-            {
-                Name = request.Name,
-                Description = request.Description,
-                Price = request.Price,
-                QuantityInStock = request.Quantity,
-                CreatedAt = DateOnly.FromDateTime(DateTime.Now),
-            };
-            _context.Products.Add(product);
+            await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
-            return true;
         }
 
-        public async Task<ProductResponseDto> GetProduct(string name)
+        public Task DeleteProductAsync(Guid id)
         {
-            var product = await _context.Products.FirstOrDefaultAsync(x => x.Name == name) ?? throw new Exception("Not found");
-            var response = new ProductResponseDto(
-            Title: product.Name,
-            Description: product.Description,
-            Price: product.Price,
-            Quantity: product.QuantityInStock
-            );
-            return response;
+            throw new NotImplementedException();
+        }
+
+        public async Task<Product> GetByIdAsync(Guid id)
+        {
+            return await _context.Products
+                .FirstOrDefaultAsync(x => x.Id == id) ?? throw new NotImplementedException();
+        }
+
+        public async Task<List<Product>> GetByNameAsync(string name)
+        {
+            var products = await _context.Products
+                .Where(p => p.Name.Contains(name))
+                .ToListAsync();
+            return products;
+        }
+
+        public Task<Product> GetProductAsync(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateProductAsync(Product product, Guid id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

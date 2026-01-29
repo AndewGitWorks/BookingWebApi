@@ -22,5 +22,22 @@ namespace Domain.Entities
             }
             Status = status;
         }
+        public void AddItem(Product product, int quantity)
+        {
+            if (quantity < 0) throw new ArgumentException("Quantity can not be less than 0");
+            var existingItem = Items.FirstOrDefault(i => i.ProductId == product.Id) ?? throw new Exception("Item not found");
+            if(existingItem != null)
+                existingItem.Quantity += quantity;
+            else
+            {
+                var item = new OrderItem
+                {
+                    ProductId = product.Id,
+                    UnitPrice = product.Price,
+                    Quantity = quantity
+                };
+                Items.Add(item);
+            }
+        }
     }
 }

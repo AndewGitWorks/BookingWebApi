@@ -9,5 +9,6 @@ namespace Domain.Enums
         New = 0,
         Paid = 1,
         Cancelled = 2,
+        Draft = 3
     }
 }

@@ -34,7 +34,7 @@ namespace API.Controllers
         { 
             await _validator.ValidateAndThrowAsync(request);
             var token = await _authInterface.Registration(request);
-            HttpContext.Response.Cookies.Append("myToken", token, new CookieOptions
+            HttpContext.Response.Cookies.Append("JWTtoken", token, new CookieOptions
             {
                 HttpOnly = true
             });

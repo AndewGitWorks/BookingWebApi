@@ -8,5 +8,6 @@ namespace Application.Interfaces
     public interface IJwtInterface
     {
         public string GenerateToken(User user);
+        public Task<Guid> GetIdFromClaim(string token);
     }
 }
