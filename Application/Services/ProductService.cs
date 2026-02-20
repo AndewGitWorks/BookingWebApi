@@ -28,9 +28,22 @@ namespace Application.Services
             await _productRepository.AddProductAsync(product);
         }
 
-        public Task DeleteProductAsync()
+        public async Task DeleteProductAsync(Guid id)
         {
-            throw new NotImplementedException();
+            await _productRepository.DeleteProductAsync(id);
+        }
+
+        public async Task<List<ProductListResponse>> GetAllAsync()
+        {
+            var list = await _productRepository.GetAllAsync();
+            var response = list.Select(x => new ProductListResponse
+            (
+                Name: x.Name,
+                Description: x.Description,
+                Price: x.Price,
+                Quantity: x.QuantityInStock
+            )).ToList();
+            return response;
         }
 
         public async Task<Product> GetByIdAsync(Guid id)
@@ -51,9 +64,9 @@ namespace Application.Services
             return response;
         }
 
-        public Task UpdateProductAsync()
+        public async Task UpdateProductAsync(Product product,Guid id)
         {
-            throw new NotImplementedException();
+            await _productRepository.UpdateProductAsync(product ,id);
         }
     }
 }

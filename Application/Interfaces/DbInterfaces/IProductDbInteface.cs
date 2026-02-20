@@ -14,5 +14,6 @@ namespace Application.Interfaces.DbInterfaces
         public Task<Product> GetProductAsync(Guid id);
         public Task<List<Product>> GetByNameAsync(string name);
         public Task<Product> GetByIdAsync(Guid id);
+        public Task<List<Product>> GetAllAsync();
     }
 }

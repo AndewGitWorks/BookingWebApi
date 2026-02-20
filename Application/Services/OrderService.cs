@@ -27,30 +27,38 @@ namespace Application.Services
             _user = _usr;
         }
 
-        public async Task AddProductAsync(Guid oderId, Guid productId)
+        public async Task AddProductAsync(string token,Guid oderId, Guid productId)
         {
             var order = await _order.GetOrderAsync(oderId);
+            if(order == null)
+            {
+                // order = await CreateDraftAsync(token);
+            }
             var product = await _product.GetByIdAsync(productId);
             order.AddItem(product, 1);
             await _order.UpdateOrderAsync(order);
         }
 
-        public async Task CreateDraftAsync(string token)
+        public async Task<OrderResponse> CreateDraftAsync(string token)
         {
             var userId = await _jwt.GetId(token);
             var actualUser = await _user.GetByIdAsync(userId);
             var newDraftCard = new Order
             {
-                Id = userId,
+                UserId = actualUser.Id,
                 User = actualUser,
                 Status = OrderStatus.Draft,
+                CreatedAt = DateTime.UtcNow,
+                Items = new List<OrderItem>()
             };
             await _order.AddOrderAsync(newDraftCard);
+            var response = new OrderResponse(newDraftCard.Id, newDraftCard.CreatedAt, newDraftCard.Status);
+            return response;
         }
 
-        public Task CreateOrderAsync()
+        public async Task CreateOrderAsync(string token)
         {
-            throw new NotImplementedException();
+            
         }
 
         public Task DeleteOrderAsync()
@@ -61,6 +69,37 @@ namespace Application.Services
         public Task DeleteProductAsync()
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<List<Order>> GetAllByUserAsync(string token)
+        {
+            var userToken = await _jwt.GetId(token);
+            var orders = await _order.GetByUser(userToken);
+            return orders;
+        }
+
+        public async Task<OrderDetailResponse> GetOrderDetailAsync(string token, Guid orderId)
+        {
+            var userToken = await _jwt.GetId(token);
+            var order = await _order.GetOrderAsync(orderId) ?? throw new Exception("Order not found.");
+            if(order.UserId != userToken)
+            {
+                throw new Exception("Unauthorized access to order details.");
+            }
+            var response = new OrderDetailResponse
+            {
+                Id = order.Id,
+                CreatedAt = order.CreatedAt,
+                Status = order.Status,
+                TotalAmount = order.TotalAmount,
+                Items = [.. order.Items.Select(i => new OrderItemResponse
+                {
+                    ProductId = i.ProductId,
+                    UnitPrice = i.UnitPrice,
+                    Quantity = i.Quantity
+                })]
+            };
+            return response;
         }
 
         public Task UpdateOrderAsync()

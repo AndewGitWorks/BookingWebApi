@@ -10,6 +10,7 @@ namespace Application.Interfaces.DbInterfaces
         public Task AddOrderAsync(Order order);
         public Task DeleteOrderAsync(Guid id);
         public Task UpdateOrderAsync(Order order);
-        public Task<Order> GetOrderAsync(Guid id);
+        public Task<Order?> GetOrderAsync(Guid id);
+        public Task<List<Order>> GetByUser(Guid id);
     }
 }

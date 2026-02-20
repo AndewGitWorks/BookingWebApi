@@ -11,6 +11,8 @@ namespace Application.DTOs.Validator
         public static IServiceCollection SetValidatorHandler(this IServiceCollection service)
         {
             service.AddScoped<IValidator<RegistrationRequestDto>, CreateUserRequestValidator>();
+            service.AddScoped<IValidator<LoginRequestDto>, LoginRequestValidator>();
+            service.AddScoped<IValidator<CreateProductDto>, CreateProductRequestValidator>();
             return service;
         }
     }
