@@ -24,9 +24,16 @@ namespace Infrastructure.CrudRepository
             await _context.SaveChangesAsync();
         }
 
-        public Task DeleteProductAsync(Guid id)
+        public async Task DeleteProductAsync(Guid id)
         {
-            throw new NotImplementedException();
+            var request = await _context.Products.FirstOrDefaultAsync(x => x.Id == id) ?? throw new NotImplementedException();
+            _context.Products.Remove(request);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<List<Product>> GetAllAsync()
+        {
+            return await _context.Products.ToListAsync();
         }
 
         public async Task<Product> GetByIdAsync(Guid id)
@@ -52,5 +59,7 @@ namespace Infrastructure.CrudRepository
         {
             throw new NotImplementedException();
         }
+
+        
     }
 }

@@ -30,12 +30,21 @@ namespace Infrastructure.CrudRepository
             throw new NotImplementedException();
         }
 
-        public async Task<Order> GetOrderAsync(Guid id)
+        public async Task<List<Order>> GetByUser(Guid id)
+        {
+            return await _context.Orders
+                .Include(o => o.Items)
+                .ThenInclude(o => o.Product)
+                .Where(o => o.Id == id)
+                .ToListAsync();
+        }
+
+        public async Task<Order?> GetOrderAsync(Guid id)
         {
             return await _context.Orders
                 .Include(i => i.Items)
                 .ThenInclude(p => p.Product)
-                .FirstOrDefaultAsync(i => i.Id == id) ?? throw new Exception("Order not found");
+                .FirstOrDefaultAsync(i => i.Id == id);
         }
 
         public async Task UpdateOrderAsync(Order order)
