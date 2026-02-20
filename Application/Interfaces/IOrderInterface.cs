@@ -13,6 +13,7 @@ namespace Application.Interfaces
         public Task AddProductAsync(string token,Guid id, Guid productId);
         public Task DeleteOrderAsync();
         public Task DeleteProductAsync();
+        public Task<Order> GetOrderById(string token, Guid id);
         public Task UpdateOrderAsync();
         public Task UpdateProductQuantityAsync();
         public Task<List<Order>> GetAllByUserAsync(string token);

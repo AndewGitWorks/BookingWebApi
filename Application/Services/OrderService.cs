@@ -32,7 +32,8 @@ namespace Application.Services
             var order = await _order.GetOrderAsync(oderId);
             if(order == null)
             {
-                // order = await CreateDraftAsync(token);
+                 order = await _order.GetDraftOrderAsync(oderId)
+                 ?? throw new Exception("Draft not found");
             }
             var product = await _product.GetByIdAsync(productId);
             order.AddItem(product, 1);
@@ -51,7 +52,7 @@ namespace Application.Services
                 CreatedAt = DateTime.UtcNow,
                 Items = new List<OrderItem>()
             };
-            await _order.AddOrderAsync(newDraftCard);
+            await _order.ConfirmOrderAsync(newDraftCard);
             var response = new OrderResponse(newDraftCard.Id, newDraftCard.CreatedAt, newDraftCard.Status);
             return response;
         }
@@ -76,6 +77,13 @@ namespace Application.Services
             var userToken = await _jwt.GetId(token);
             var orders = await _order.GetByUser(userToken);
             return orders;
+        }
+
+        public async Task<Order> GetOrderById(string token, Guid id)
+        {
+            var order = await _order.GetOrderAsync(id)
+            ?? throw new Exception("Order not found!");
+            return order;
         }
 
         public async Task<OrderDetailResponse> GetOrderDetailAsync(string token, Guid orderId)

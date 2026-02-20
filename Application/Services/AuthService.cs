@@ -33,7 +33,6 @@ namespace Application.Services
             }
             throw new Exception("Unauthorized! Wrong password or email");
         }
-
         public async Task<string> Registration(RegistrationRequestDto request)
         {
             if(request.Password != request.ExtraPassword)
