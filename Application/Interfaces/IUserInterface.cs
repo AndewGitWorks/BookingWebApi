@@ -8,6 +8,7 @@ namespace Application.Interfaces
 {
     public interface IUserInterface
     {
+        public Task<User> GetUserByIdAsync(Guid id);
         public Task ChangeRoleAsync();
         public Task ChangeEmailAsync();
         public Task<User> CreateUserAsync(RegistrationRequestDto request);
