@@ -38,6 +38,7 @@ namespace Infrastructure.CrudRepository
 
         public async Task<Product> GetByIdAsync(Guid id)
         {
+            _context.GetHashCode();
             return await _context.Products
                 .FirstOrDefaultAsync(x => x.Id == id) ?? throw new NotImplementedException();
         }
@@ -59,7 +60,5 @@ namespace Infrastructure.CrudRepository
         {
             throw new NotImplementedException();
         }
-
-        
     }
 }

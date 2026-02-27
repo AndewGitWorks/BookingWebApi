@@ -15,8 +15,8 @@ namespace Infrastructure.Auth
             var jsonToken = handler.ReadToken(token) as JwtSecurityToken;
             var userIdClaim = jsonToken?.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value
                 ?? throw new Exception("Claim cannot be readed");
-            var newToGuid = Guid.TryParse(userIdClaim, out var exeption);
-            return exeption;
+            var newToGuid = Guid.Parse(userIdClaim);
+            return newToGuid;
         }
     }
 }
