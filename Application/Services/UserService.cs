@@ -44,5 +44,11 @@ namespace Application.Services
             await _userRepository.AddUserAsync(usr);
             return usr;
         }
+
+        public async Task<User> GetUserByIdAsync(Guid id)
+        {
+            return await _userRepository.GetByIdAsync(id)
+                ?? throw new Exception("User not found");
+        }
     }
 }
