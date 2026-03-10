@@ -1,4 +1,4 @@
-﻿using Application.DTOs;
+﻿using Application.DTOs.Order;
 using Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ namespace Application.Interfaces
         public Task<Order> GetOrderById(Guid id);
         public Task UpdateOrderAsync(Order order);
         public Task UpdateProductQuantityAsync(Guid orderId, Guid productId, int quantity);
-        public Task<List<Order>> GetAllByUserAsync(string token);
+        public Task<List<OrdersListResponse>> GetAllByUserAsync(string token);
         public Task<OrderDetailResponse> GetOrderDetailAsync(string token, Guid orderId);
     }
 }

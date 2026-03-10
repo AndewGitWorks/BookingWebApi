@@ -13,5 +13,15 @@ namespace Domain.Entities
         public Product? Product { get; set; }
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
+        public void UpdateQuantity(int amount)
+        {
+            //if (this.Quantity < amount)
+            //{
+            //    throw new Exception("Insufficient stock available.");
+            //}
+            if (amount >= int.MaxValue || amount <= int.MinValue) 
+                throw new Exception("Tebe zachem stolko?");
+            this.Quantity += amount;
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using FluentValidation;
+﻿using Application.DTOs.Product;
+using Application.DTOs.User;
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -10,9 +12,10 @@ namespace Application.DTOs.Validator
     {
         public static IServiceCollection SetValidatorHandler(this IServiceCollection service)
         {
-            service.AddScoped<IValidator<RegistrationRequestDto>, CreateUserRequestValidator>();
-            service.AddScoped<IValidator<LoginRequestDto>, LoginRequestValidator>();
-            service.AddScoped<IValidator<CreateProductDto>, CreateProductRequestValidator>();
+            service.AddSingleton<IValidator<RegistrationRequestDto>, CreateUserRequestValidator>();
+            service.AddSingleton<IValidator<LoginRequestDto>, LoginRequestValidator>();
+            service.AddSingleton<IValidator<CreateProductDto>, CreateProductRequestValidator>();
+            service.AddSingleton<IValidator<UpdateUserRoleDto>, UpdateUserRoleValidator>();
             return service;
         }
     }

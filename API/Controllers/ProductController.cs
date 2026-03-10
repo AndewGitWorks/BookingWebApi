@@ -1,5 +1,6 @@
-﻿using Application.DTOs;
+﻿using Application.DTOs.Product;
 using Application.Interfaces;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -26,7 +27,7 @@ namespace API.Controllers
         }
         [HttpGet]
         [Route("getAllbyName")]
-        public async Task<ICollection<GetProductByName>> GetProductsByName([FromQuery] string name)
+        public async Task<ICollection<ProductResponseDto>> GetProductsByName([FromQuery] string name)
         {
             return await _product.GetProductsByNameAsync(name);
         }
@@ -43,6 +44,27 @@ namespace API.Controllers
         {
             await _order.AddProductAsync(token, orderId, productId);
             return new OkResult();
+        }
+        [HttpDelete]
+        [Route("delete")]
+        public async Task<IActionResult> DeleteProduct([FromQuery] Guid id)
+        {
+            try
+            {
+                await _product.DeleteProductAsync(id);
+                return new OkResult();
+            }
+            catch (Exception)
+            {
+                return new NotFoundResult();
+            }
+        }
+        [HttpGet]
+        [Route("/products")]
+        public async Task<ActionResult<ProductResponseDto>> GetProductAsync([FromQuery]Guid productId)
+        {
+            var response = await _product.GetProductForResponseAsync(productId);
+            return response;
         }
     }
 }

@@ -1,0 +1,690 @@
+2026-03-04 01:15:02.998 -08:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 01:15:03.272 -08:00 [INF] Now listening on: https://localhost:7115
+2026-03-04 01:15:03.274 -08:00 [INF] Now listening on: http://localhost:5215
+2026-03-04 01:15:03.500 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 01:15:03.502 -08:00 [INF] Hosting environment: Development
+2026-03-04 01:15:03.503 -08:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-04 01:15:17.899 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/ - null null
+2026-03-04 01:15:18.246 -08:00 [INF] HTTP GET / responded 404 in 93.3000 ms
+2026-03-04 01:15:18.261 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/ - 404 null null 374.702ms
+2026-03-04 01:15:18.271 -08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7115/, Response status code: 404
+2026-03-04 01:15:23.150 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/ - null null
+2026-03-04 01:15:23.165 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:15:23.371 -08:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-04 01:15:23.395 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:15:23.402 -08:00 [INF] HTTP GET /scalar/ responded 200 in 239.9513 ms
+2026-03-04 01:15:23.410 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/ - 200 null text/html 259.8492ms
+2026-03-04 01:15:23.460 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-04 01:15:23.485 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 24.6987ms
+2026-03-04 01:15:23.585 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.js - null null
+2026-03-04 01:15:23.593 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - null null
+2026-03-04 01:15:23.593 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_vs/browserLink - null null
+2026-03-04 01:15:23.605 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:15:23.605 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:15:23.627 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:15:23.627 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:15:23.636 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:15:23.638 -08:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 35.3119 ms
+2026-03-04 01:15:23.648 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 54.9851ms
+2026-03-04 01:15:23.679 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:15:23.683 -08:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 82.4143 ms
+2026-03-04 01:15:23.688 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.js - 200 918313 text/javascript 102.7062ms
+2026-03-04 01:15:23.694 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_vs/browserLink - 200 null text/javascript; charset=UTF-8 101.3196ms
+2026-03-04 01:15:24.166 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/openapi/v1.json - null null
+2026-03-04 01:15:24.171 -08:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:15:24.205 -08:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:15:24.207 -08:00 [INF] HTTP GET /openapi/v1.json responded 200 in 36.2093 ms
+2026-03-04 01:15:24.211 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/openapi/v1.json - 200 null application/json;charset=utf-8 45.2275ms
+2026-03-04 01:15:38.823 -08:00 [INF] Request starting HTTP/2 POST https://localhost:7115/login - application/json 43
+2026-03-04 01:15:38.828 -08:00 [INF] Executing endpoint 'API.Controllers.AuthController.Login (API)'
+2026-03-04 01:15:38.887 -08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.User.LoginRequestDto) on controller API.Controllers.AuthController (API).
+2026-03-04 01:15:41.273 -08:00 [INF] Executed DbCommand (79ms) [Parameters=[@email='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @email
+LIMIT 1
+2026-03-04 01:15:41.541 -08:00 [INF] User logged in with email: test@test.com
+2026-03-04 01:15:41.554 -08:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-03-04 01:15:41.566 -08:00 [INF] Executed action API.Controllers.AuthController.Login (API) in 2668.749ms
+2026-03-04 01:15:41.569 -08:00 [INF] Executed endpoint 'API.Controllers.AuthController.Login (API)'
+2026-03-04 01:15:41.571 -08:00 [INF] HTTP POST /login responded 200 in 2743.0833 ms
+2026-03-04 01:15:41.586 -08:00 [INF] Request finished HTTP/2 POST https://localhost:7115/login - 200 null text/plain; charset=utf-8 2762.4373ms
+2026-03-04 01:16:05.644 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/User/order/list?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIxMWU5OTlkYS1jNzdiLTQ5N2MtODZmYS0yNGZlNDM1NTg3Y2QiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc3MjYxNTg2MX0.rKQBXhvsJMJ1KumP3fXR-MU_ag7L1jafcm8kctusoOY - null null
+2026-03-04 01:16:05.650 -08:00 [INF] Executing endpoint 'API.Controllers.UserController.GetAllOrdersAsync (API)'
+2026-03-04 01:16:05.662 -08:00 [INF] Route matched with {action = "GetAllOrders", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Application.DTOs.Order.OrdersListResponse]] GetAllOrdersAsync(System.String) on controller API.Controllers.UserController (API).
+2026-03-04 01:16:05.810 -08:00 [INF] Executed DbCommand (9ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @id
+LIMIT 1
+2026-03-04 01:16:06.006 -08:00 [INF] Executed DbCommand (25ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."Status", o."TotalAmount", o."CreatedAt", s."ItemId", s."ProductName", s."Quantity", s."UnitPrice", s."Id"
+FROM "Orders" AS o
+LEFT JOIN (
+    SELECT o0."Id" AS "ItemId", p."Name" AS "ProductName", o0."Quantity", o0."UnitPrice", p."Id", o0."OrderId"
+    FROM "OrderItems" AS o0
+    INNER JOIN "Products" AS p ON o0."ProductId" = p."Id"
+) AS s ON o."Id" = s."OrderId"
+WHERE o."UserId" = @id
+ORDER BY o."Id", s."ItemId"
+2026-03-04 01:16:06.043 -08:00 [INF] User: {"Id":"11e999da-c77b-497c-86fa-24fe435587cd","Email":"test@test.com","PasswordHash":"AQAAAAIAAYagAAAAEKvOqdbvnSOjFAX27LbFWbQg5tuTGF2fQvtYvks1dfz/YcjEyUv9bnm6cbWbEKW8/g==","Role":"Admin","CreatedAt":"0001-01-01","Orders":[],"$type":"User"} Action: Show all orders
+2026-03-04 01:16:06.060 -08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Application.DTOs.Order.OrdersListResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-04 01:16:06.077 -08:00 [INF] Executed action API.Controllers.UserController.GetAllOrdersAsync (API) in 412.2045ms
+2026-03-04 01:16:06.086 -08:00 [INF] Executed endpoint 'API.Controllers.UserController.GetAllOrdersAsync (API)'
+2026-03-04 01:16:06.088 -08:00 [INF] HTTP GET /User/order/list responded 200 in 438.8746 ms
+2026-03-04 01:16:06.091 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/User/order/list?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIxMWU5OTlkYS1jNzdiLTQ5N2MtODZmYS0yNGZlNDM1NTg3Y2QiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc3MjYxNTg2MX0.rKQBXhvsJMJ1KumP3fXR-MU_ag7L1jafcm8kctusoOY - 200 null application/json; charset=utf-8 446.9296ms
+2026-03-04 01:16:17.570 -08:00 [INF] Application is shutting down...
+2026-03-04 01:20:46.316 -08:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 01:20:46.513 -08:00 [INF] Now listening on: https://localhost:7115
+2026-03-04 01:20:46.515 -08:00 [INF] Now listening on: http://localhost:5215
+2026-03-04 01:20:46.738 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 01:20:46.740 -08:00 [INF] Hosting environment: Development
+2026-03-04 01:20:46.741 -08:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-04 01:21:07.276 -08:00 [INF] Request starting HTTP/2 POST https://localhost:7115/login - application/json 44
+2026-03-04 01:21:07.353 -08:00 [INF] Executing endpoint 'API.Controllers.AuthController.Login (API)'
+2026-03-04 01:21:07.381 -08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] Login(Application.DTOs.User.LoginRequestDto) on controller API.Controllers.AuthController (API).
+2026-03-04 01:21:09.025 -08:00 [INF] Executed DbCommand (67ms) [Parameters=[@email='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @email
+LIMIT 1
+2026-03-04 01:21:09.050 -08:00 [ERR] An error occurred while logging in.
+System.Exception: User not found
+   at Infrastructure.CrudRepository.UserRepository.GetByEmailAsync(String email) in C:\Users\usr\source\repos\Booking\Infrastructure\CrudRepository\UserRepository.cs:line 34
+   at Application.Services.AuthService.Login(LoginRequestDto request) in C:\Users\usr\source\repos\Booking\Application\Services\AuthService.cs:line 28
+   at API.Controllers.AuthController.Login(LoginRequestDto request) in C:\Users\usr\source\repos\Booking\API\Controllers\AuthController.cs:line 31
+2026-03-04 01:21:09.098 -08:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2026-03-04 01:21:09.107 -08:00 [INF] Executed action API.Controllers.AuthController.Login (API) in 1716.9082ms
+2026-03-04 01:21:09.110 -08:00 [INF] Executed endpoint 'API.Controllers.AuthController.Login (API)'
+2026-03-04 01:21:09.115 -08:00 [ERR] HTTP POST /login responded 500 in 1797.2139 ms
+2026-03-04 01:21:09.132 -08:00 [INF] Request finished HTTP/2 POST https://localhost:7115/login - 500 null text/plain; charset=utf-8 1857.7671ms
+2026-03-04 01:22:50.561 -08:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 01:22:50.732 -08:00 [INF] Now listening on: https://localhost:7115
+2026-03-04 01:22:50.734 -08:00 [INF] Now listening on: http://localhost:5215
+2026-03-04 01:22:50.953 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 01:22:50.955 -08:00 [INF] Hosting environment: Development
+2026-03-04 01:22:50.956 -08:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-04 01:22:58.303 -08:00 [INF] Request starting HTTP/2 POST https://localhost:7115/login - application/json 44
+2026-03-04 01:22:58.380 -08:00 [INF] Executing endpoint 'API.Controllers.AuthController.Login (API)'
+2026-03-04 01:22:58.408 -08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] Login(Application.DTOs.User.LoginRequestDto) on controller API.Controllers.AuthController (API).
+2026-03-04 01:23:00.325 -08:00 [INF] Executed DbCommand (71ms) [Parameters=[@email='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @email
+LIMIT 1
+2026-03-04 01:23:00.355 -08:00 [ERR] An error occurred while logging in.
+System.Exception: User not found
+   at Infrastructure.CrudRepository.UserRepository.GetByEmailAsync(String email) in C:\Users\usr\source\repos\Booking\Infrastructure\CrudRepository\UserRepository.cs:line 34
+   at Application.Services.AuthService.Login(LoginRequestDto request) in C:\Users\usr\source\repos\Booking\Application\Services\AuthService.cs:line 28
+   at API.Controllers.AuthController.Login(LoginRequestDto request) in C:\Users\usr\source\repos\Booking\API\Controllers\AuthController.cs:line 31
+2026-03-04 01:23:00.379 -08:00 [ERR] Error @System.Exception: User not found
+   at Infrastructure.CrudRepository.UserRepository.GetByEmailAsync(String email) in C:\Users\usr\source\repos\Booking\Infrastructure\CrudRepository\UserRepository.cs:line 34
+   at Application.Services.AuthService.Login(LoginRequestDto request) in C:\Users\usr\source\repos\Booking\Application\Services\AuthService.cs:line 28
+   at API.Controllers.AuthController.Login(LoginRequestDto request) in C:\Users\usr\source\repos\Booking\API\Controllers\AuthController.cs:line 31 User with @test1@test.com
+2026-03-04 01:23:00.393 -08:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2026-03-04 01:23:00.402 -08:00 [INF] Executed action API.Controllers.AuthController.Login (API) in 1985.7249ms
+2026-03-04 01:23:00.409 -08:00 [INF] Executed endpoint 'API.Controllers.AuthController.Login (API)'
+2026-03-04 01:23:00.414 -08:00 [ERR] HTTP POST /login responded 500 in 2072.2827 ms
+2026-03-04 01:23:00.430 -08:00 [INF] Request finished HTTP/2 POST https://localhost:7115/login - 500 null text/plain; charset=utf-8 2128.3437ms
+2026-03-04 01:23:28.622 -08:00 [INF] Application is shutting down...
+2026-03-04 01:26:59.134 -08:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 01:26:59.330 -08:00 [INF] Now listening on: https://localhost:7115
+2026-03-04 01:26:59.333 -08:00 [INF] Now listening on: http://localhost:5215
+2026-03-04 01:26:59.555 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 01:26:59.557 -08:00 [INF] Hosting environment: Development
+2026-03-04 01:26:59.558 -08:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-04 01:27:04.009 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/ - null null
+2026-03-04 01:27:04.155 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:27:04.300 -08:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-04 01:27:04.315 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:27:04.320 -08:00 [INF] HTTP GET /scalar/ responded 200 in 200.9632 ms
+2026-03-04 01:27:04.333 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/ - 200 null text/html 325.6343ms
+2026-03-04 01:27:04.378 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-04 01:27:04.378 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.js - null null
+2026-03-04 01:27:04.378 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - null null
+2026-03-04 01:27:04.378 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_vs/browserLink - null null
+2026-03-04 01:27:04.392 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:27:04.394 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:27:04.396 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 18.6945ms
+2026-03-04 01:27:04.408 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:27:04.408 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:27:04.414 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:27:04.422 -08:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 29.8066 ms
+2026-03-04 01:27:04.426 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 48.1894ms
+2026-03-04 01:27:04.438 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:27:04.442 -08:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 52.3830 ms
+2026-03-04 01:27:04.446 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.js - 200 918313 text/javascript 68.4613ms
+2026-03-04 01:27:04.447 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_vs/browserLink - 200 null text/javascript; charset=UTF-8 69.2498ms
+2026-03-04 01:27:04.878 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/openapi/v1.json - null null
+2026-03-04 01:27:04.887 -08:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:27:04.916 -08:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:27:04.919 -08:00 [INF] HTTP GET /openapi/v1.json responded 200 in 35.0963 ms
+2026-03-04 01:27:04.923 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/openapi/v1.json - 200 null application/json;charset=utf-8 44.0241ms
+2026-03-04 01:27:23.972 -08:00 [INF] Request starting HTTP/2 POST https://localhost:7115/registration - application/json 57
+2026-03-04 01:27:23.976 -08:00 [INF] Executing endpoint 'API.Controllers.AuthController.Registration (API)'
+2026-03-04 01:27:24.011 -08:00 [INF] Route matched with {action = "Registration", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registration(Application.DTOs.User.RegistrationRequestDto) on controller API.Controllers.AuthController (API).
+2026-03-04 01:27:24.232 -08:00 [ERR] An error occurred while registering.
+FluentValidation.ValidationException: Validation failed: 
+ -- Email: A valid email is required. Severity: Error
+ -- Email: The length of 'Email' must be at least 10 characters. You entered 4 characters. Severity: Error
+ -- Password: Password must be at least 6 characters long. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /_/src/FluentValidation/AbstractValidator.cs:line 390
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 176
+   at FluentValidation.AbstractValidator`1.ValidateAsync(ValidationContext`1 context, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 137
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrowAsync[T](IValidator`1 validator, T instance, CancellationToken cancellationToken) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 72
+   at API.Controllers.AuthController.Registration(RegistrationRequestDto request) in C:\Users\usr\source\repos\Booking\API\Controllers\AuthController.cs:line 53
+2026-03-04 01:27:24.262 -08:00 [ERR] Error @FluentValidation.ValidationException: Validation failed: 
+ -- Email: A valid email is required. Severity: Error
+ -- Email: The length of 'Email' must be at least 10 characters. You entered 4 characters. Severity: Error
+ -- Password: Password must be at least 6 characters long. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /_/src/FluentValidation/AbstractValidator.cs:line 390
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 176
+   at FluentValidation.AbstractValidator`1.ValidateAsync(ValidationContext`1 context, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 137
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrowAsync[T](IValidator`1 validator, T instance, CancellationToken cancellationToken) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 72
+   at API.Controllers.AuthController.Registration(RegistrationRequestDto request) in C:\Users\usr\source\repos\Booking\API\Controllers\AuthController.cs:line 53 User with @1111
+2026-03-04 01:27:24.271 -08:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2026-03-04 01:27:24.279 -08:00 [INF] Executed action API.Controllers.AuthController.Registration (API) in 259.6061ms
+2026-03-04 01:27:24.282 -08:00 [INF] Executed endpoint 'API.Controllers.AuthController.Registration (API)'
+2026-03-04 01:27:24.284 -08:00 [ERR] HTTP POST /registration responded 500 in 307.4548 ms
+2026-03-04 01:27:24.290 -08:00 [INF] Request finished HTTP/2 POST https://localhost:7115/registration - 500 null text/plain; charset=utf-8 317.4064ms
+2026-03-04 01:28:48.960 -08:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 01:28:49.146 -08:00 [INF] Now listening on: https://localhost:7115
+2026-03-04 01:28:49.148 -08:00 [INF] Now listening on: http://localhost:5215
+2026-03-04 01:28:49.358 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 01:28:49.359 -08:00 [INF] Hosting environment: Development
+2026-03-04 01:28:49.361 -08:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-04 01:28:52.018 -08:00 [INF] Request starting HTTP/2 POST https://localhost:7115/registration - application/json 57
+2026-03-04 01:28:52.096 -08:00 [INF] Executing endpoint 'API.Controllers.AuthController.Registration (API)'
+2026-03-04 01:28:52.128 -08:00 [INF] Route matched with {action = "Registration", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registration(Application.DTOs.User.RegistrationRequestDto) on controller API.Controllers.AuthController (API).
+2026-03-04 01:28:52.338 -08:00 [ERR] An error occurred while registering.
+FluentValidation.ValidationException: Validation failed: 
+ -- Email: A valid email is required. Severity: Error
+ -- Email: The length of 'Email' must be at least 10 characters. You entered 4 characters. Severity: Error
+ -- Password: Password must be at least 6 characters long. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /_/src/FluentValidation/AbstractValidator.cs:line 390
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 176
+   at FluentValidation.AbstractValidator`1.ValidateAsync(ValidationContext`1 context, CancellationToken cancellation) in /_/src/FluentValidation/AbstractValidator.cs:line 137
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrowAsync[T](IValidator`1 validator, T instance, CancellationToken cancellationToken) in /_/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 72
+   at API.Controllers.AuthController.Registration(RegistrationRequestDto request) in C:\Users\usr\source\repos\Booking\API\Controllers\AuthController.cs:line 53
+2026-03-04 01:28:52.378 -08:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2026-03-04 01:28:52.389 -08:00 [INF] Executed action API.Controllers.AuthController.Registration (API) in 252.1769ms
+2026-03-04 01:28:52.392 -08:00 [INF] Executed endpoint 'API.Controllers.AuthController.Registration (API)'
+2026-03-04 01:28:52.397 -08:00 [ERR] HTTP POST /registration responded 500 in 338.0679 ms
+2026-03-04 01:28:52.406 -08:00 [INF] Request finished HTTP/2 POST https://localhost:7115/registration - 500 null text/plain; charset=utf-8 390.4583ms
+2026-03-04 01:29:34.682 -08:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 01:29:34.878 -08:00 [INF] Now listening on: https://localhost:7115
+2026-03-04 01:29:34.881 -08:00 [INF] Now listening on: http://localhost:5215
+2026-03-04 01:29:35.090 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 01:29:35.091 -08:00 [INF] Hosting environment: Development
+2026-03-04 01:29:35.092 -08:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-04 01:29:42.048 -08:00 [INF] Request starting HTTP/2 POST https://localhost:7115/registration - application/json 57
+2026-03-04 01:29:42.136 -08:00 [INF] Executing endpoint 'API.Controllers.AuthController.Registration (API)'
+2026-03-04 01:29:42.175 -08:00 [INF] Route matched with {action = "Registration", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Registration(Application.DTOs.User.RegistrationRequestDto) on controller API.Controllers.AuthController (API).
+2026-03-04 01:29:42.431 -08:00 [ERR] Registration Error @Validation failed: 
+ -- Email: A valid email is required. Severity: Error
+ -- Email: The length of 'Email' must be at least 10 characters. You entered 4 characters. Severity: Error
+ -- Password: Password must be at least 6 characters long. Severity: Error
+2026-03-04 01:29:42.439 -08:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2026-03-04 01:29:42.453 -08:00 [INF] Executed action API.Controllers.AuthController.Registration (API) in 261.1241ms
+2026-03-04 01:29:42.458 -08:00 [INF] Executed endpoint 'API.Controllers.AuthController.Registration (API)'
+2026-03-04 01:29:42.463 -08:00 [ERR] HTTP POST /registration responded 500 in 366.9643 ms
+2026-03-04 01:29:42.473 -08:00 [INF] Request finished HTTP/2 POST https://localhost:7115/registration - 500 null text/plain; charset=utf-8 427.6343ms
+2026-03-04 01:32:16.385 -08:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 01:32:16.566 -08:00 [INF] Now listening on: https://localhost:7115
+2026-03-04 01:32:16.568 -08:00 [INF] Now listening on: http://localhost:5215
+2026-03-04 01:32:16.828 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 01:32:16.829 -08:00 [INF] Hosting environment: Development
+2026-03-04 01:32:16.830 -08:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-04 01:32:22.808 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/ - null null
+2026-03-04 01:32:22.969 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:32:23.134 -08:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-04 01:32:23.150 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:32:23.155 -08:00 [INF] HTTP GET /scalar/ responded 200 in 231.1026 ms
+2026-03-04 01:32:23.166 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/ - 200 null text/html 359.8048ms
+2026-03-04 01:32:23.313 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.js - null null
+2026-03-04 01:32:23.313 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - null null
+2026-03-04 01:32:23.313 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-04 01:32:23.314 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_vs/browserLink - null null
+2026-03-04 01:32:23.321 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:32:23.324 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:32:23.337 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 23.8084ms
+2026-03-04 01:32:23.338 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:32:23.338 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:32:23.349 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:32:23.352 -08:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 29.1233 ms
+2026-03-04 01:32:23.356 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 42.6898ms
+2026-03-04 01:32:23.373 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:32:23.378 -08:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 58.7496 ms
+2026-03-04 01:32:23.379 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_vs/browserLink - 200 null text/javascript; charset=UTF-8 64.8074ms
+2026-03-04 01:32:23.382 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.js - 200 918313 text/javascript 68.354ms
+2026-03-04 01:32:23.832 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/openapi/v1.json - null null
+2026-03-04 01:32:23.838 -08:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:32:23.869 -08:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:32:23.871 -08:00 [INF] HTTP GET /openapi/v1.json responded 200 in 34.8884 ms
+2026-03-04 01:32:23.874 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/openapi/v1.json - 200 null application/json;charset=utf-8 42.2423ms
+2026-03-04 01:38:24.135 -08:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 01:38:24.316 -08:00 [INF] Now listening on: https://localhost:7115
+2026-03-04 01:38:24.320 -08:00 [INF] Now listening on: http://localhost:5215
+2026-03-04 01:38:24.561 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 01:38:24.562 -08:00 [INF] Hosting environment: Development
+2026-03-04 01:38:24.564 -08:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-04 01:38:43.695 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/ - null null
+2026-03-04 01:38:43.846 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:38:43.997 -08:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-04 01:38:44.014 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:38:44.020 -08:00 [INF] HTTP GET /scalar/ responded 200 in 208.2194 ms
+2026-03-04 01:38:44.032 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/ - 200 null text/html 338.6799ms
+2026-03-04 01:38:44.135 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.js - null null
+2026-03-04 01:38:44.135 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_vs/browserLink - null null
+2026-03-04 01:38:44.135 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - null null
+2026-03-04 01:38:44.136 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-04 01:38:44.144 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:38:44.153 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:38:44.162 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:38:44.162 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:38:44.164 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 28.7713ms
+2026-03-04 01:38:44.167 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:38:44.175 -08:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 26.0033 ms
+2026-03-04 01:38:44.180 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 45.0231ms
+2026-03-04 01:38:44.189 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:38:44.193 -08:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 50.4082 ms
+2026-03-04 01:38:44.194 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.7863ms
+2026-03-04 01:38:44.197 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.js - 200 918313 text/javascript 61.3652ms
+2026-03-04 01:38:44.684 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/openapi/v1.json - null null
+2026-03-04 01:38:44.689 -08:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:38:44.715 -08:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:38:44.718 -08:00 [INF] HTTP GET /openapi/v1.json responded 200 in 28.7444 ms
+2026-03-04 01:38:44.721 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/openapi/v1.json - 200 null application/json;charset=utf-8 36.8282ms
+2026-03-04 01:39:00.848 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/User/order/list?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIxMWU5OTlkYS1jNzdiLTQ5N2MtODZmYS0yNGZlNDM1NTg3Y2QiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc3MjYxNTg2MX0.rKQBXhvsJMJ1KumP3fXR-MU_ag7L1jafcm8kctusoOY - null null
+2026-03-04 01:39:00.854 -08:00 [INF] Executing endpoint 'API.Controllers.UserController.GetAllOrdersAsync (API)'
+2026-03-04 01:39:00.883 -08:00 [INF] Route matched with {action = "GetAllOrders", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Application.DTOs.Order.OrdersListResponse]] GetAllOrdersAsync(System.String) on controller API.Controllers.UserController (API).
+2026-03-04 01:39:02.497 -08:00 [INF] Executed DbCommand (65ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @id
+LIMIT 1
+2026-03-04 01:39:02.734 -08:00 [INF] Executed DbCommand (9ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."Status", o."TotalAmount", o."CreatedAt", s."ItemId", s."ProductName", s."Quantity", s."UnitPrice", s."Id"
+FROM "Orders" AS o
+LEFT JOIN (
+    SELECT o0."Id" AS "ItemId", p."Name" AS "ProductName", o0."Quantity", o0."UnitPrice", p."Id", o0."OrderId"
+    FROM "OrderItems" AS o0
+    INNER JOIN "Products" AS p ON o0."ProductId" = p."Id"
+) AS s ON o."Id" = s."OrderId"
+WHERE o."UserId" = @id
+ORDER BY o."Id", s."ItemId"
+2026-03-04 01:39:02.756 -08:00 [INF] User: {"Id":"11e999da-c77b-497c-86fa-24fe435587cd","Email":"test@test.com","PasswordHash":"AQAAAAIAAYagAAAAEKvOqdbvnSOjFAX27LbFWbQg5tuTGF2fQvtYvks1dfz/YcjEyUv9bnm6cbWbEKW8/g==","Role":"Admin","CreatedAt":"0001-01-01","Orders":[],"$type":"User"} Action: Show all orders
+2026-03-04 01:39:02.774 -08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Application.DTOs.Order.OrdersListResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-04 01:39:02.791 -08:00 [INF] Executed action API.Controllers.UserController.GetAllOrdersAsync (API) in 1897.5087ms
+2026-03-04 01:39:02.793 -08:00 [INF] Executed endpoint 'API.Controllers.UserController.GetAllOrdersAsync (API)'
+2026-03-04 01:39:02.794 -08:00 [INF] HTTP GET /User/order/list responded 200 in 1941.0356 ms
+2026-03-04 01:39:02.808 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/User/order/list?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIxMWU5OTlkYS1jNzdiLTQ5N2MtODZmYS0yNGZlNDM1NTg3Y2QiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc3MjYxNTg2MX0.rKQBXhvsJMJ1KumP3fXR-MU_ag7L1jafcm8kctusoOY - 200 null application/json; charset=utf-8 1959.6228ms
+2026-03-04 01:47:28.989 -08:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 01:47:29.163 -08:00 [INF] Now listening on: https://localhost:7115
+2026-03-04 01:47:29.166 -08:00 [INF] Now listening on: http://localhost:5215
+2026-03-04 01:47:29.374 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 01:47:29.376 -08:00 [INF] Hosting environment: Development
+2026-03-04 01:47:29.377 -08:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-04 01:47:34.608 -08:00 [INF] Application is shutting down...
+2026-03-04 01:47:46.790 -08:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 01:47:46.990 -08:00 [INF] Now listening on: https://localhost:7115
+2026-03-04 01:47:46.994 -08:00 [INF] Now listening on: http://localhost:5215
+2026-03-04 01:47:47.229 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 01:47:47.231 -08:00 [INF] Hosting environment: Development
+2026-03-04 01:47:47.233 -08:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-04 01:47:55.459 -08:00 [INF] Application is shutting down...
+2026-03-04 01:48:00.803 -08:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 01:48:01.186 -08:00 [INF] Now listening on: https://localhost:7115
+2026-03-04 01:48:01.192 -08:00 [INF] Now listening on: http://localhost:5215
+2026-03-04 01:48:01.474 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 01:48:01.477 -08:00 [INF] Hosting environment: Development
+2026-03-04 01:48:01.479 -08:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-04 01:48:04.776 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/ - null null
+2026-03-04 01:48:05.068 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:48:05.336 -08:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-04 01:48:05.398 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:48:05.413 -08:00 [INF] HTTP GET /scalar/ responded 200 in 430.8670 ms
+2026-03-04 01:48:05.449 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/ - 200 null text/html 678.9967ms
+2026-03-04 01:48:05.714 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.js - null null
+2026-03-04 01:48:05.716 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - null null
+2026-03-04 01:48:05.718 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_vs/browserLink - null null
+2026-03-04 01:48:05.746 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:48:05.737 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-04 01:48:05.756 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:48:05.777 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:48:05.778 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:48:05.785 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:48:05.788 -08:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 35.0660 ms
+2026-03-04 01:48:05.792 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 55.3347ms
+2026-03-04 01:48:05.793 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 76.9443ms
+2026-03-04 01:48:05.816 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:48:05.821 -08:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 76.5757 ms
+2026-03-04 01:48:05.826 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_vs/browserLink - 200 null text/javascript; charset=UTF-8 108.2412ms
+2026-03-04 01:48:05.827 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.js - 200 918313 text/javascript 113.9461ms
+2026-03-04 01:48:06.358 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/openapi/v1.json - null null
+2026-03-04 01:48:06.365 -08:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:48:06.392 -08:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:48:06.395 -08:00 [INF] HTTP GET /openapi/v1.json responded 200 in 29.8787 ms
+2026-03-04 01:48:06.400 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/openapi/v1.json - 200 null application/json;charset=utf-8 41.7075ms
+2026-03-04 01:48:32.766 -08:00 [INF] Request starting HTTP/2 POST https://localhost:7115/logout?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIxMWU5OTlkYS1jNzdiLTQ5N2MtODZmYS0yNGZlNDM1NTg3Y2QiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc3MjYxNTg2MX0.rKQBXhvsJMJ1KumP3fXR-MU_ag7L1jafcm8kctusoOY - none 0
+2026-03-04 01:48:32.775 -08:00 [INF] Executing endpoint 'API.Controllers.AuthController.Logout (API)'
+2026-03-04 01:48:32.828 -08:00 [INF] Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout(System.String) on controller API.Controllers.AuthController (API).
+2026-03-04 01:49:27.465 -08:00 [INF] User with email: @test@test.com
+2026-03-04 01:49:32.688 -08:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-03-04 01:49:32.696 -08:00 [INF] Executed action API.Controllers.AuthController.Logout (API) in 59859.3472ms
+2026-03-04 01:49:32.699 -08:00 [INF] Executed endpoint 'API.Controllers.AuthController.Logout (API)'
+2026-03-04 01:49:32.701 -08:00 [INF] HTTP POST /logout responded 200 in 59926.6121 ms
+2026-03-04 01:49:32.707 -08:00 [INF] Request finished HTTP/2 POST https://localhost:7115/logout?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIxMWU5OTlkYS1jNzdiLTQ5N2MtODZmYS0yNGZlNDM1NTg3Y2QiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc3MjYxNTg2MX0.rKQBXhvsJMJ1KumP3fXR-MU_ag7L1jafcm8kctusoOY - 200 null text/plain; charset=utf-8 59940.5482ms
+2026-03-04 01:49:35.920 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/ - null null
+2026-03-04 01:49:35.933 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:49:35.940 -08:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-04 01:49:35.943 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:49:35.945 -08:00 [INF] HTTP GET /scalar/ responded 200 in 12.7114 ms
+2026-03-04 01:49:35.950 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/ - 200 null text/html 30.0293ms
+2026-03-04 01:49:36.059 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-04 01:49:36.061 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.js - null null
+2026-03-04 01:49:36.062 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - null null
+2026-03-04 01:49:36.062 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_vs/browserLink - null null
+2026-03-04 01:49:36.066 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 7.8121ms
+2026-03-04 01:49:36.083 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:49:36.104 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:49:36.078 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:49:36.106 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:49:36.109 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:49:36.111 -08:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 304 in 28.2264 ms
+2026-03-04 01:49:36.114 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:49:36.118 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - 304 null null 56.4113ms
+2026-03-04 01:49:36.119 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.2603ms
+2026-03-04 01:49:36.121 -08:00 [INF] HTTP GET /scalar/scalar.js responded 304 in 43.2664 ms
+2026-03-04 01:49:36.140 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.js - 304 null null 78.6696ms
+2026-03-04 01:49:36.669 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/openapi/v1.json - null null
+2026-03-04 01:49:36.677 -08:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:49:36.700 -08:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:49:36.704 -08:00 [INF] HTTP GET /openapi/v1.json responded 200 in 27.4133 ms
+2026-03-04 01:49:36.711 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/openapi/v1.json - 200 null application/json;charset=utf-8 41.8658ms
+2026-03-04 01:49:48.387 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/ - null null
+2026-03-04 01:49:48.401 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:49:48.409 -08:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-04 01:49:48.411 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:49:48.414 -08:00 [INF] HTTP GET /scalar/ responded 200 in 13.4041 ms
+2026-03-04 01:49:48.419 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/ - 200 null text/html 31.7383ms
+2026-03-04 01:49:48.505 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.js - null null
+2026-03-04 01:49:48.512 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:49:48.512 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - null null
+2026-03-04 01:49:48.512 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_vs/browserLink - null null
+2026-03-04 01:49:48.513 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-04 01:49:48.519 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:49:48.514 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:49:48.531 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 18.007ms
+2026-03-04 01:49:48.533 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:49:48.534 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.5943ms
+2026-03-04 01:49:48.536 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:49:48.545 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:49:48.554 -08:00 [INF] HTTP GET /scalar/scalar.js responded 304 in 42.5675 ms
+2026-03-04 01:49:48.556 -08:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 304 in 36.7889 ms
+2026-03-04 01:49:48.561 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.js - 304 null null 55.3267ms
+2026-03-04 01:49:48.565 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - 304 null null 53.0503ms
+2026-03-04 01:49:49.124 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/openapi/v1.json - null null
+2026-03-04 01:49:49.132 -08:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:49:49.148 -08:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:49:49.151 -08:00 [INF] HTTP GET /openapi/v1.json responded 200 in 19.2948 ms
+2026-03-04 01:49:49.156 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/openapi/v1.json - 200 null application/json;charset=utf-8 32.4562ms
+2026-03-04 01:53:28.305 -08:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 01:53:28.515 -08:00 [INF] Now listening on: https://localhost:7115
+2026-03-04 01:53:28.518 -08:00 [INF] Now listening on: http://localhost:5215
+2026-03-04 01:53:28.782 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 01:53:28.784 -08:00 [INF] Hosting environment: Development
+2026-03-04 01:53:28.786 -08:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-04 01:53:30.582 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/ - null null
+2026-03-04 01:53:30.743 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:53:30.908 -08:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-04 01:53:30.925 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:53:30.931 -08:00 [INF] HTTP GET /scalar/ responded 200 in 225.0388 ms
+2026-03-04 01:53:30.945 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/ - 200 null text/html 364.7704ms
+2026-03-04 01:53:31.085 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.js - null null
+2026-03-04 01:53:31.085 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - null null
+2026-03-04 01:53:31.085 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-04 01:53:31.086 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_vs/browserLink - null null
+2026-03-04 01:53:31.096 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:53:31.103 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:53:31.117 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 31.1797ms
+2026-03-04 01:53:31.122 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:53:31.122 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:53:31.132 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:53:31.135 -08:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 35.2482 ms
+2026-03-04 01:53:31.141 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 55.1574ms
+2026-03-04 01:53:31.156 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:53:31.161 -08:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 66.6708 ms
+2026-03-04 01:53:31.161 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_vs/browserLink - 200 null text/javascript; charset=UTF-8 75.3119ms
+2026-03-04 01:53:31.168 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.js - 200 918313 text/javascript 82.2905ms
+2026-03-04 01:53:31.661 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/openapi/v1.json - null null
+2026-03-04 01:53:31.669 -08:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:53:31.699 -08:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:53:31.702 -08:00 [INF] HTTP GET /openapi/v1.json responded 200 in 33.3652 ms
+2026-03-04 01:53:31.707 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/openapi/v1.json - 200 null application/json;charset=utf-8 45.2831ms
+2026-03-04 01:53:45.692 -08:00 [INF] Request starting HTTP/2 POST https://localhost:7115/logout?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIxMWU5OTlkYS1jNzdiLTQ5N2MtODZmYS0yNGZlNDM1NTg3Y2QiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc3MjYxNTg2MX0.rKQBXhvsJMJ1KumP3fXR-MU_ag7L1jafcm8kctusoOY - none 0
+2026-03-04 01:53:45.699 -08:00 [INF] Executing endpoint 'API.Controllers.AuthController.Logout (API)'
+2026-03-04 01:53:45.749 -08:00 [INF] Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task Logout(System.String) on controller API.Controllers.AuthController (API).
+2026-03-04 01:53:45.943 -08:00 [INF] User with email: @test@test.com
+2026-03-04 01:53:45.952 -08:00 [INF] Executed action API.Controllers.AuthController.Logout (API) in 192.7456ms
+2026-03-04 01:53:45.957 -08:00 [INF] Executed endpoint 'API.Controllers.AuthController.Logout (API)'
+2026-03-04 01:53:45.959 -08:00 [INF] HTTP POST /logout responded 200 in 260.6587 ms
+2026-03-04 01:53:45.965 -08:00 [INF] Request finished HTTP/2 POST https://localhost:7115/logout?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIxMWU5OTlkYS1jNzdiLTQ5N2MtODZmYS0yNGZlNDM1NTg3Y2QiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc3MjYxNTg2MX0.rKQBXhvsJMJ1KumP3fXR-MU_ag7L1jafcm8kctusoOY - 200 0 null 273.4511ms
+2026-03-04 01:54:16.357 -08:00 [INF] Request starting HTTP/2 POST https://localhost:7115/logout?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJhbmRyZXdAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIwMTljYjA1OC03NDlkLTc3OTctOWNiZi1kNDA4ZTUxMjBmZDMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzcyNDg1MjMzfQ.yNK7dlHTOh_uydJueOri5P0sDVuJFadov6lHmC3fXYw - none 0
+2026-03-04 01:54:16.364 -08:00 [INF] Executing endpoint 'API.Controllers.AuthController.Logout (API)'
+2026-03-04 01:54:16.366 -08:00 [INF] Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task Logout(System.String) on controller API.Controllers.AuthController (API).
+2026-03-04 01:54:16.385 -08:00 [INF] User with email: @andrew@gmail.com
+2026-03-04 01:54:16.389 -08:00 [INF] Executed action API.Controllers.AuthController.Logout (API) in 18.628ms
+2026-03-04 01:54:16.392 -08:00 [INF] Executed endpoint 'API.Controllers.AuthController.Logout (API)'
+2026-03-04 01:54:16.394 -08:00 [INF] HTTP POST /logout responded 200 in 30.9721 ms
+2026-03-04 01:54:16.398 -08:00 [INF] Request finished HTTP/2 POST https://localhost:7115/logout?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJhbmRyZXdAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIwMTljYjA1OC03NDlkLTc3OTctOWNiZi1kNDA4ZTUxMjBmZDMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzcyNDg1MjMzfQ.yNK7dlHTOh_uydJueOri5P0sDVuJFadov6lHmC3fXYw - 200 0 null 41.2312ms
+2026-03-04 01:54:18.505 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/ - null null
+2026-03-04 01:54:18.518 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:54:18.522 -08:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-04 01:54:18.525 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:54:18.528 -08:00 [INF] HTTP GET /scalar/ responded 200 in 10.7349 ms
+2026-03-04 01:54:18.535 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/ - 200 null text/html 30.4438ms
+2026-03-04 01:54:18.668 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.js - null null
+2026-03-04 01:54:18.675 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:54:18.677 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - null null
+2026-03-04 01:54:18.677 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_vs/browserLink - null null
+2026-03-04 01:54:18.679 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:54:18.679 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-04 01:54:18.683 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:54:18.690 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:54:18.697 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 17.3101ms
+2026-03-04 01:54:18.699 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:54:18.701 -08:00 [INF] HTTP GET /scalar/scalar.js responded 304 in 25.7666 ms
+2026-03-04 01:54:18.705 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.0956ms
+2026-03-04 01:54:18.710 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:54:18.714 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.js - 304 null null 45.9429ms
+2026-03-04 01:54:18.723 -08:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 304 in 39.6864 ms
+2026-03-04 01:54:18.736 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - 304 null null 59.4678ms
+2026-03-04 01:54:19.277 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/openapi/v1.json - null null
+2026-03-04 01:54:19.284 -08:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:54:19.302 -08:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:54:19.305 -08:00 [INF] HTTP GET /openapi/v1.json responded 200 in 21.3151 ms
+2026-03-04 01:54:19.309 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/openapi/v1.json - 200 null application/json;charset=utf-8 31.8313ms
+2026-03-04 01:54:29.861 -08:00 [INF] Request starting HTTP/2 POST https://localhost:7115/logout?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJhbmRyZXdAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIwMTljYjA1OC03NDlkLTc3OTctOWNiZi1kNDA4ZTUxMjBmZDMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzcyNDg1MjMzfQ.yNK7dlHTOh_uydJueOri5P0sDVuJFadov6lHmC3fXYw - none 0
+2026-03-04 01:54:29.868 -08:00 [INF] Executing endpoint 'API.Controllers.AuthController.Logout (API)'
+2026-03-04 01:54:29.870 -08:00 [INF] Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task Logout(System.String) on controller API.Controllers.AuthController (API).
+2026-03-04 01:54:29.893 -08:00 [INF] User with email: @andrew@gmail.com
+2026-03-04 01:54:29.896 -08:00 [INF] Executed action API.Controllers.AuthController.Logout (API) in 21.6836ms
+2026-03-04 01:54:29.898 -08:00 [INF] Executed endpoint 'API.Controllers.AuthController.Logout (API)'
+2026-03-04 01:54:29.900 -08:00 [INF] HTTP POST /logout responded 200 in 32.7237 ms
+2026-03-04 01:54:29.905 -08:00 [INF] Request finished HTTP/2 POST https://localhost:7115/logout?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJhbmRyZXdAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIwMTljYjA1OC03NDlkLTc3OTctOWNiZi1kNDA4ZTUxMjBmZDMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzcyNDg1MjMzfQ.yNK7dlHTOh_uydJueOri5P0sDVuJFadov6lHmC3fXYw - 200 0 null 43.1491ms
+2026-03-04 01:55:32.268 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/ - null null
+2026-03-04 01:55:32.279 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:55:32.284 -08:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-04 01:55:32.287 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 01:55:32.289 -08:00 [INF] HTTP GET /scalar/ responded 200 in 10.3059 ms
+2026-03-04 01:55:32.293 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/ - 200 null text/html 25.4304ms
+2026-03-04 01:55:32.413 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.js - null null
+2026-03-04 01:55:32.414 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - null null
+2026-03-04 01:55:32.425 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_vs/browserLink - null null
+2026-03-04 01:55:32.420 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:55:32.425 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:55:32.426 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-04 01:55:32.433 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:55:32.435 -08:00 [INF] Sending file with download name ''.
+2026-03-04 01:55:32.439 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.4548ms
+2026-03-04 01:55:32.441 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 15.056ms
+2026-03-04 01:55:32.443 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 01:55:32.445 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 01:55:32.462 -08:00 [INF] HTTP GET /scalar/scalar.js responded 304 in 42.7149 ms
+2026-03-04 01:55:32.464 -08:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 304 in 39.1281 ms
+2026-03-04 01:55:32.468 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.js - 304 null null 55.2762ms
+2026-03-04 01:55:32.472 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - 304 null null 58.5448ms
+2026-03-04 01:55:33.021 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/openapi/v1.json - null null
+2026-03-04 01:55:33.028 -08:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:55:33.042 -08:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 01:55:33.044 -08:00 [INF] HTTP GET /openapi/v1.json responded 200 in 16.7694 ms
+2026-03-04 01:55:33.049 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/openapi/v1.json - 200 null application/json;charset=utf-8 27.9148ms
+2026-03-04 02:09:53.554 -08:00 [INF] Application is shutting down...
+2026-03-04 02:10:12.054 -08:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 02:10:12.240 -08:00 [INF] Now listening on: https://localhost:7115
+2026-03-04 02:10:12.250 -08:00 [INF] Now listening on: http://localhost:5215
+2026-03-04 02:10:12.499 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 02:10:12.500 -08:00 [INF] Hosting environment: Development
+2026-03-04 02:10:12.501 -08:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-04 02:10:19.829 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/ - null null
+2026-03-04 02:10:19.995 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 02:10:20.182 -08:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-04 02:10:20.201 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 02:10:20.207 -08:00 [INF] HTTP GET /scalar/ responded 200 in 251.1033 ms
+2026-03-04 02:10:20.220 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/ - 200 null text/html 392.5958ms
+2026-03-04 02:10:20.328 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-04 02:10:20.338 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.js - null null
+2026-03-04 02:10:20.338 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - null null
+2026-03-04 02:10:20.338 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_vs/browserLink - null null
+2026-03-04 02:10:20.343 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 15.1412ms
+2026-03-04 02:10:20.347 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 02:10:20.351 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 02:10:20.365 -08:00 [INF] Sending file with download name ''.
+2026-03-04 02:10:20.365 -08:00 [INF] Sending file with download name ''.
+2026-03-04 02:10:20.371 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 02:10:20.373 -08:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 24.2727 ms
+2026-03-04 02:10:20.377 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 38.7559ms
+2026-03-04 02:10:20.391 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 02:10:20.394 -08:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 49.5132 ms
+2026-03-04 02:10:20.397 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.2091ms
+2026-03-04 02:10:20.399 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.js - 200 918313 text/javascript 61.5265ms
+2026-03-04 02:10:20.855 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/openapi/v1.json - null null
+2026-03-04 02:10:20.862 -08:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 02:10:20.896 -08:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 02:10:20.898 -08:00 [INF] HTTP GET /openapi/v1.json responded 200 in 39.2133 ms
+2026-03-04 02:10:20.901 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/openapi/v1.json - 200 null application/json;charset=utf-8 45.943ms
+2026-03-04 02:12:04.667 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/products?productId=019bfa94-bf62-7eed-b163-2ad826ec1479 - null null
+2026-03-04 02:12:04.674 -08:00 [INF] Executing endpoint 'API.Controllers.ProductController.GetProductAsync (API)'
+2026-03-04 02:12:04.711 -08:00 [INF] Route matched with {action = "GetProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.DTOs.Product.ProductResponseDto]] GetProductAsync(System.Guid) on controller API.Controllers.ProductController (API).
+2026-03-04 02:12:06.452 -08:00 [INF] Executed DbCommand (70ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedAt", p."Description", p."IsActive", p."Name", p."Price", p."QuantityInStock"
+FROM "Products" AS p
+WHERE p."Id" = @id
+LIMIT 1
+2026-03-04 02:12:06.575 -08:00 [INF] Executing ObjectResult, writing value of type 'Application.DTOs.Product.ProductResponseDto'.
+2026-03-04 02:12:06.590 -08:00 [INF] Executed action API.Controllers.ProductController.GetProductAsync (API) in 1870.1304ms
+2026-03-04 02:12:06.596 -08:00 [INF] Executed endpoint 'API.Controllers.ProductController.GetProductAsync (API)'
+2026-03-04 02:12:06.599 -08:00 [INF] HTTP GET /products responded 200 in 1924.8143 ms
+2026-03-04 02:12:06.616 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/products?productId=019bfa94-bf62-7eed-b163-2ad826ec1479 - 200 null application/json; charset=utf-8 1948.4678ms
+2026-03-04 02:12:15.423 -08:00 [INF] Application is shutting down...
+2026-03-04 05:31:44.059 -08:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 05:31:44.166 -08:00 [INF] Now listening on: https://localhost:7115
+2026-03-04 05:31:44.167 -08:00 [INF] Now listening on: http://localhost:5215
+2026-03-04 05:31:44.293 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 05:31:44.293 -08:00 [INF] Hosting environment: Development
+2026-03-04 05:31:44.294 -08:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-04 05:31:50.401 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/ - null null
+2026-03-04 05:31:50.531 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 05:31:50.626 -08:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-04 05:31:50.635 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 05:31:50.637 -08:00 [INF] HTTP GET /scalar/ responded 200 in 136.0794 ms
+2026-03-04 05:31:50.643 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/ - 200 null text/html 244.5405ms
+2026-03-04 05:31:50.705 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-04 05:31:50.713 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 8.7013ms
+2026-03-04 05:31:50.777 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.js - null null
+2026-03-04 05:31:50.777 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - null null
+2026-03-04 05:31:50.777 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_vs/browserLink - null null
+2026-03-04 05:31:50.782 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 05:31:50.783 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 05:31:50.789 -08:00 [INF] Sending file with download name ''.
+2026-03-04 05:31:50.789 -08:00 [INF] Sending file with download name ''.
+2026-03-04 05:31:50.795 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 05:31:50.796 -08:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 14.1399 ms
+2026-03-04 05:31:50.798 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 21.2184ms
+2026-03-04 05:31:50.814 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 05:31:50.816 -08:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 35.5441 ms
+2026-03-04 05:31:50.818 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.js - 200 918313 text/javascript 41.1402ms
+2026-03-04 05:31:50.827 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.5374ms
+2026-03-04 05:31:51.128 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/openapi/v1.json - null null
+2026-03-04 05:31:51.132 -08:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 05:31:51.155 -08:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 05:31:51.156 -08:00 [INF] HTTP GET /openapi/v1.json responded 200 in 25.8979 ms
+2026-03-04 05:31:51.158 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/openapi/v1.json - 200 null application/json;charset=utf-8 30.44ms
+2026-03-04 05:32:10.745 -08:00 [INF] Application is shutting down...
+2026-03-04 05:32:47.110 -08:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 05:32:47.431 -08:00 [INF] Now listening on: https://localhost:7115
+2026-03-04 05:32:47.432 -08:00 [INF] Now listening on: http://localhost:5215
+2026-03-04 05:32:47.725 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 05:32:47.726 -08:00 [INF] Hosting environment: Development
+2026-03-04 05:32:47.727 -08:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-04 05:34:24.202 -08:00 [INF] Request starting HTTP/2 POST https://localhost:7115/login - application/json 43
+2026-03-04 05:34:24.389 -08:00 [INF] Executing endpoint 'API.Controllers.AuthController.Login (API)'
+2026-03-04 05:34:24.426 -08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.User.LoginRequestDto) on controller API.Controllers.AuthController (API).
+2026-03-04 05:34:26.213 -08:00 [INF] Executed DbCommand (67ms) [Parameters=[@email='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @email
+LIMIT 1
+2026-03-04 05:34:26.404 -08:00 [INF] User logged in with email: test@test.com
+2026-03-04 05:34:26.412 -08:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-03-04 05:34:26.420 -08:00 [INF] Executed action API.Controllers.AuthController.Login (API) in 1987.6055ms
+2026-03-04 05:34:26.423 -08:00 [INF] Executed endpoint 'API.Controllers.AuthController.Login (API)'
+2026-03-04 05:34:26.427 -08:00 [INF] HTTP POST /login responded 200 in 2182.5752 ms
+2026-03-04 05:34:26.444 -08:00 [INF] Request finished HTTP/2 POST https://localhost:7115/login - 200 null text/plain; charset=utf-8 2247.8808ms
+2026-03-04 05:34:35.771 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/User/order/list?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIxMWU5OTlkYS1jNzdiLTQ5N2MtODZmYS0yNGZlNDM1NTg3Y2QiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc3MjYzMTM4Nn0.bwEZSEp7S8S15g_9-EujDJUKg6PqXTvxd8Y8ZzoEw_g - null null
+2026-03-04 05:34:35.776 -08:00 [INF] Executing endpoint 'API.Controllers.UserController.GetAllOrdersAsync (API)'
+2026-03-04 05:34:35.784 -08:00 [INF] Route matched with {action = "GetAllOrders", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Application.DTOs.Order.OrdersListResponse]] GetAllOrdersAsync(System.String) on controller API.Controllers.UserController (API).
+2026-03-04 07:38:13.035 -08:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 07:38:13.164 -08:00 [INF] Now listening on: https://localhost:7115
+2026-03-04 07:38:13.166 -08:00 [INF] Now listening on: http://localhost:5215
+2026-03-04 07:38:13.335 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 07:38:13.343 -08:00 [INF] Hosting environment: Development
+2026-03-04 07:38:13.344 -08:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-04 07:38:16.339 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/ - null null
+2026-03-04 07:38:16.518 -08:00 [INF] HTTP GET / responded 404 in 37.1651 ms
+2026-03-04 07:38:16.526 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/ - 404 null null 189.0924ms
+2026-03-04 07:38:16.544 -08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7115/, Response status code: 404
+2026-03-04 07:38:24.048 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/ - null null
+2026-03-04 07:38:24.061 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 07:38:24.214 -08:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-03-04 07:38:24.227 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-03-04 07:38:24.230 -08:00 [INF] HTTP GET /scalar/ responded 200 in 172.6072 ms
+2026-03-04 07:38:24.238 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/ - 200 null text/html 189.1261ms
+2026-03-04 07:38:24.296 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.js - null null
+2026-03-04 07:38:24.296 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-04 07:38:24.296 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/_vs/browserLink - null null
+2026-03-04 07:38:24.296 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - null null
+2026-03-04 07:38:24.309 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 07:38:24.316 -08:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 07:38:24.324 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 27.8427ms
+2026-03-04 07:38:24.326 -08:00 [INF] Sending file with download name ''.
+2026-03-04 07:38:24.326 -08:00 [INF] Sending file with download name ''.
+2026-03-04 07:38:24.337 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-03-04 07:38:24.339 -08:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 24.1608 ms
+2026-03-04 07:38:24.345 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 48.3083ms
+2026-03-04 07:38:24.360 -08:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-03-04 07:38:24.364 -08:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 58.8738 ms
+2026-03-04 07:38:24.368 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/scalar/scalar.js - 200 918313 text/javascript 72.0824ms
+2026-03-04 07:38:24.385 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/_vs/browserLink - 200 null text/javascript; charset=UTF-8 88.1151ms
+2026-03-04 07:38:24.834 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/openapi/v1.json - null null
+2026-03-04 07:38:24.838 -08:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 07:38:24.875 -08:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 07:38:24.877 -08:00 [INF] HTTP GET /openapi/v1.json responded 200 in 38.6857 ms
+2026-03-04 07:38:24.880 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/openapi/v1.json - 200 null application/json;charset=utf-8 46.3549ms
+2026-03-04 07:38:46.834 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/openapi/v1.json - null null
+2026-03-04 07:38:46.839 -08:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 07:38:46.859 -08:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-03-04 07:38:46.861 -08:00 [INF] HTTP GET /openapi/v1.json responded 200 in 23.2599 ms
+2026-03-04 07:38:46.866 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/openapi/v1.json - 200 null application/json;charset=utf-8 32.7589ms
+2026-03-04 07:41:35.214 -08:00 [INF] Application is shutting down...

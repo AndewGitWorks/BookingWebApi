@@ -1,4 +1,4 @@
-﻿using Application.DTOs;
+﻿using Application.DTOs.Order;
 using Application.Interfaces;
 using Application.Interfaces.DbInterfaces;
 using Domain.Entities;
@@ -37,7 +37,7 @@ namespace Application.Services
                 order = await _order.GetDraftOrderAsync(orderId)
                     ?? throw new Exception("Draft order not found");
             }
-            var product = await _product.GetByIdAsync(productId);
+            var product = await _product.GetProductById(productId);
             
             order.AddItem(product, 1);
             await _order.SaveChangesAsync(CancellationToken.None);
@@ -75,9 +75,11 @@ namespace Application.Services
             await _orderItem.DeleteAsync(productId, orderId);
         }
 
-        public Task<List<Order>> GetAllByUserAsync(string token)
+        public async Task<List<OrdersListResponse>> GetAllByUserAsync(string token)
         {
-            throw new NotImplementedException();
+            var usrId = await _jwt.GetId(token);
+            var items = await _order.GetByUser(usrId);
+            return items ?? throw new Exception("Cart is empty");
         }
 
         public Task<Order> GetOrderById(Guid id)
@@ -97,7 +99,7 @@ namespace Application.Services
                 Items = dbOrder.Items.Select
                 (x => new OrderItemResponse
                 {
-                    ProductId = x.ProductId,
+                    ItemId = x.ProductId,
                     ProductName = x.Product!.Name ?? string.Empty,
                     UnitPrice = x.UnitPrice,
                     Quantity = x.Quantity,

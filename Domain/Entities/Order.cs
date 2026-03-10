@@ -22,22 +22,46 @@ namespace Domain.Entities
             }
             Status = status;
         }
+        //public void AddItem(Product product, int quantity)
+        //{
+        //    if (quantity < 0) throw new ArgumentException("Quantity can not be less than 0");
+        //    var existingItem = Items.FirstOrDefault(i => i.ProductId == product.Id);
+        //    if(existingItem != null)
+        //        existingItem.Quantity += quantity;
+        //    else
+        //    {
+        //        var item = new OrderItem
+        //        {
+        //            Id = Guid.NewGuid(),
+        //            ProductId = product.Id,
+        //            UnitPrice = product.Price,
+        //            Quantity = quantity
+        //        };
+        //        Items.Add(item);
+        //    }
+        //}
         public void AddItem(Product product, int quantity)
         {
-            if (quantity < 0) throw new ArgumentException("Quantity can not be less than 0");
-            var existingItem = Items.FirstOrDefault(i => i.ProductId == product.Id) ?? throw new Exception("Item not found");
-            if(existingItem != null)
-                existingItem.Quantity += quantity;
-            else
+            if (quantity <= 0)
+                throw new ArgumentException("Quantity must be greater than 0");
+
+            var existingItem = Items.FirstOrDefault(i => i.ProductId == product.Id);
+
+            if (existingItem != null)
             {
-                var item = new OrderItem
-                {
-                    ProductId = product.Id,
-                    UnitPrice = product.Price,
-                    Quantity = quantity
-                };
-                Items.Add(item);
+                existingItem.Quantity += quantity;
+                return;
             }
+
+            var item = new OrderItem
+            {
+                ProductId = product.Id,
+                Product = product,     // связь
+                UnitPrice = product.Price,
+                Quantity = quantity
+            };
+
+            Items.Add(item);
         }
     }
 }

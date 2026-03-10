@@ -9,7 +9,7 @@ namespace Application.Interfaces.DbInterfaces
     {
         public Task CreateAsync(Guid orderId, Product product);
         public Task DeleteAsync(Guid orderId, Guid productId);
-        public Task<List<OrderItem>> GetAllAsync(Guid orderId);
+        //public Task<List<OrderItem>> GetAllAsync(Guid orderId);
 
     }
 }

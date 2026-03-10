@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿using Application.DTOs.Product;
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -18,6 +19,8 @@ namespace Application.DTOs.Validator
                 .GreaterThan(0).WithMessage("Product price must be greater than zero.");
             RuleFor(x => x.Quantity)
                 .GreaterThanOrEqualTo(0).WithMessage("Stock quantity cannot be negative.");
+            RuleFor(x => x.Quantity)
+                .NotEmpty().WithMessage("Stock quantity is required.");
         }
     }
 }

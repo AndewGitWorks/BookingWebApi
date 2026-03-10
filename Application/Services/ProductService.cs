@@ -1,4 +1,4 @@
-﻿using Application.DTOs;
+﻿using Application.DTOs.Product;
 using Application.Interfaces;
 using Application.Interfaces.DbInterfaces;
 using Domain.Entities;
@@ -46,15 +46,28 @@ namespace Application.Services
             return response;
         }
 
-        public async Task<Product> GetByIdAsync(Guid id)
+        public Task<Product> GetProductById(Guid id)
         {
-            return await _productRepository.GetByIdAsync(id);
+            var item = _productRepository.GetProductAsync(id);
+            return item ?? throw new Exception("Product not found!");
         }
 
-        public async Task<List<GetProductByName>> GetProductsByNameAsync(string name)
+        public async Task<ProductResponseDto> GetProductForResponseAsync(Guid id)
+        {
+            var item = await _productRepository.GetProductAsync(id);
+            return new ProductResponseDto
+            (
+                Name: item.Name,
+                Description: item.Description,
+                Price: item.Price,
+                Quantity: item.QuantityInStock
+            );
+        }
+
+        public async Task<List<ProductResponseDto>> GetProductsByNameAsync(string name)
         {
             var products = await _productRepository.GetByNameAsync(name);
-            var response = products.Select(p => new GetProductByName
+            var response = products.Select(p => new ProductResponseDto
             (
                 Name: p.Name,
                 Description: p.Description,

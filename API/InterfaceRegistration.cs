@@ -6,6 +6,7 @@ using Infrastructure.Auth;
 using Infrastructure.CrudRepository;
 using Application.DTOs.Validator;
 using Application.Interfaces.DbInterfaces;
+using Application.Services.OfferManagingService;
 namespace API
 {
     public static class InterfaceRegistration
@@ -26,11 +27,18 @@ namespace API
             services.AddScoped<IJwtParserInterface, JwtParserService>();
             // Minimal fluent validation
             services.SetValidatorHandler();
-            // Order interface
+            // Order repository
             services.AddScoped<IOrderDbInterface, OrderRepository>();
+            // Order service
             services.AddScoped<IOrderInterface, OrderService>();
+            // Product service
             services.AddScoped<IProductInterface, ProductService>();
+            // User service
             services.AddScoped<IUserInterface, UserService>();
+            // Order offer service
+            services.AddScoped<IOffedOrder, OfferOrderService>();
+            // OrderItem repository
+            services.AddScoped<IOrderItemDbInterface, OrderItemRepository>();
             return services;
         }
     }

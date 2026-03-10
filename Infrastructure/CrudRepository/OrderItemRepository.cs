@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces.DbInterfaces;
 using Domain.Entities;
 using Infrastructure.Persistance;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -27,14 +28,19 @@ namespace Infrastructure.CrudRepository
 
         }
 
-        public Task DeleteAsync(Guid orderId, Guid productId)
+        public async Task DeleteAsync(Guid orderId, Guid productId)
         {
-            throw new NotImplementedException();
+            var item = await _context.OrderItems.FirstOrDefaultAsync(
+                x => x.ProductId == productId && 
+                x.OrderId == orderId) ?? throw new Exception("Cannot remove, not found!");
+            _context.OrderItems.Remove(item);
+            await _context.SaveChangesAsync();
         }
 
-        public Task<List<OrderItem>> GetAllAsync(Guid orderId)
-        {
-            throw new NotImplementedException();
-        }
+        //public async Task<List<OrderItem>> GetAllAsync(Guid orderId)
+        //{
+        //    return 
+        //         await _context.OrderItems.Where(x => x.OrderId == orderId).ToListAsync();
+        //}
     }
 }

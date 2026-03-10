@@ -18,6 +18,7 @@ namespace Infrastructure.CrudRepository
         {
             _context = context;
         }
+
         public async Task AddProductAsync(Product product)
         {
             await _context.Products.AddAsync(product);
@@ -51,9 +52,10 @@ namespace Infrastructure.CrudRepository
             return products;
         }
 
-        public Task<Product> GetProductAsync(Guid id)
+        public async Task<Product> GetProductAsync(Guid id)
         {
-            throw new NotImplementedException();
+            return await _context.Products
+                .FirstOrDefaultAsync(x => x.Id == id) ?? throw new NotImplementedException();
         }
 
         public Task UpdateProductAsync(Product product, Guid id)

@@ -7,5 +7,6 @@ namespace Application.Interfaces
     public interface IJwtParserInterface
     {
         public Task<Guid> GetId(string token);
+        public Task<string> GetEmailFromClaimAsync(string token);
     }
 }

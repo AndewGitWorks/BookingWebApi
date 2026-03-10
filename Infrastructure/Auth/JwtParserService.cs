@@ -9,12 +9,21 @@ namespace Infrastructure.Auth
 {
     public class JwtParserService : IJwtParserInterface
     {
+        public Task<string> GetEmailFromClaimAsync(string token)
+        {
+            var handler = new JwtSecurityTokenHandler();
+            var jwtToken = handler.ReadToken(token) as JwtSecurityToken;
+            var emailClaim = jwtToken?.Claims.FirstOrDefault(c => c.Type == "userEmail")?.Value
+                ?? throw new Exception("Claim cannot be read");
+            return Task.FromResult(emailClaim);
+        }
+
         public async Task<Guid> GetId(string token)
         {
             var handler = new JwtSecurityTokenHandler();
             var jsonToken = handler.ReadToken(token) as JwtSecurityToken;
             var userIdClaim = jsonToken?.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value
-                ?? throw new Exception("Claim cannot be readed");
+                ?? throw new Exception("Claim cannot be read");
             var newToGuid = Guid.Parse(userIdClaim);
             return newToGuid;
         }

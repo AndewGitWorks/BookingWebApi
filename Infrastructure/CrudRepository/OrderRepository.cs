@@ -1,4 +1,5 @@
-﻿using Application.Interfaces;
+﻿using Application.DTOs.Order;
+using Application.Interfaces;
 using Application.Interfaces.DbInterfaces;
 using Domain.Entities;
 using Domain.Enums;
@@ -44,13 +45,24 @@ namespace Infrastructure.CrudRepository
             await _context.SaveChangesAsync();
         }
 
-        public async Task<List<Order>> GetByUser(Guid id)
+        public async Task<List<OrdersListResponse>> GetByUser(Guid id)
         {
             return await _context.Orders
-                .Include(o => o.Items)
-                .ThenInclude(o => o.Product)
-                .Where(o => o.UserId == id)
-                .ToListAsync();
+                .Where(x => x.UserId == id)
+                .Select(x => new OrdersListResponse(
+                    Id: x.Id,
+                    Status: x.Status,
+                    TotalAmount: x.TotalAmount,
+                    CreatedAt: x.CreatedAt,
+                    Items: x.Items.Select(i => new OrderItemResponse
+                    {
+                        ItemId = i.Id,
+                        ProductName = i.Product!.Name,
+                        Quantity = i.Quantity,
+                        UnitPrice = i.UnitPrice
+                    }).ToList()
+                ))
+             .ToListAsync();
         }
 
         public async Task<Order?> GetDraftOrderAsync(Guid id)
@@ -78,7 +90,7 @@ namespace Infrastructure.CrudRepository
         {
             _context.Orders.Update(order);
             await _context.SaveChangesAsync(ct);
-            _context.GetHashCode();
         }
+
     }
 }

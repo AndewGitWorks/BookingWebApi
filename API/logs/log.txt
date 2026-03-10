@@ -1,0 +1,26 @@
+2026-03-02 09:43:03.294 -08:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-02 09:43:03.399 -08:00 [INF] Now listening on: https://localhost:7115
+2026-03-02 09:43:03.400 -08:00 [INF] Now listening on: http://localhost:5215
+2026-03-02 09:43:03.534 -08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-02 09:43:03.535 -08:00 [INF] Hosting environment: Development
+2026-03-02 09:43:03.536 -08:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-02 09:43:29.775 -08:00 [INF] Request starting HTTP/2 GET https://localhost:7115/User/order/list?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIxMWU5OTlkYS1jNzdiLTQ5N2MtODZmYS0yNGZlNDM1NTg3Y2QiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc3MjQ3MDMwMn0.OhBZeXGGY1yNvG6dZlCbN64LkaMU96ckot3GvdHn_RY - null null
+2026-03-02 09:43:29.828 -08:00 [INF] Executing endpoint 'API.Controllers.UserController.GetAllOrdersAsync (API)'
+2026-03-02 09:43:29.848 -08:00 [INF] Route matched with {action = "GetAllOrders", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[Application.DTOs.Order.OrdersListResponse]] GetAllOrdersAsync(System.String) on controller API.Controllers.UserController (API).
+2026-03-02 09:43:30.859 -08:00 [INF] Executed DbCommand (43ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."Status", o."TotalAmount", o."CreatedAt", s."ItemId", s."ProductName", s."Quantity", s."UnitPrice", s."Id"
+FROM "Orders" AS o
+LEFT JOIN (
+    SELECT o0."Id" AS "ItemId", p."Name" AS "ProductName", o0."Quantity", o0."UnitPrice", p."Id", o0."OrderId"
+    FROM "OrderItems" AS o0
+    INNER JOIN "Products" AS p ON o0."ProductId" = p."Id"
+) AS s ON o."Id" = s."OrderId"
+WHERE o."UserId" = @id
+ORDER BY o."Id", s."ItemId"
+2026-03-02 09:43:30.898 -08:00 [INF] Action [{"Id":"019c729c-b305-7284-aa7f-003f2129e323","Status":"Draft","TotalAmount":0,"CreatedAt":"0001-01-01T00:00:00.0000000","Items":[],"$type":"OrdersListResponse"},{"Id":"019c729f-c59e-7e1d-b4bf-fd7a005998aa","Status":"Draft","TotalAmount":0,"CreatedAt":"0001-01-01T00:00:00.0000000","Items":[],"$type":"OrdersListResponse"},{"Id":"019c72a6-601a-7972-94c5-c8b45c07ef08","Status":"Paid","TotalAmount":0,"CreatedAt":"2026-02-18T21:27:12.1346170Z","Items":[],"$type":"OrdersListResponse"},{"Id":"019c794a-9975-7cde-a601-dd0f1d6614c3","Status":"Draft","TotalAmount":0,"CreatedAt":"2026-02-20T04:24:18.0199870Z","Items":[{"ItemId":"019c9efa-d11c-735c-929f-a3ec44663f0e","UnitPrice":250,"ProductName":"Milkies","Quantity":6,"$type":"OrderItemResponse"},{"ItemId":"019c9f78-9068-779d-ad0f-629bd153257f","UnitPrice":145,"ProductName":"Milk","Quantity":1,"$type":"OrderItemResponse"}],"$type":"OrdersListResponse"},{"Id":"11e999da-c77b-497c-86fa-24fe435587cd","Status":"Draft","TotalAmount":0,"CreatedAt":"0001-01-01T00:00:00.0000000","Items":[],"$type":"OrdersListResponse"}]
+2026-03-02 09:43:30.928 -08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Application.DTOs.Order.OrdersListResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-02 09:43:30.939 -08:00 [INF] Executed action API.Controllers.UserController.GetAllOrdersAsync (API) in 1086.8158ms
+2026-03-02 09:43:30.942 -08:00 [INF] Executed endpoint 'API.Controllers.UserController.GetAllOrdersAsync (API)'
+2026-03-02 09:43:30.946 -08:00 [INF] HTTP GET /User/order/list responded 200 in 1143.3262 ms
+2026-03-02 09:43:30.955 -08:00 [INF] Request finished HTTP/2 GET https://localhost:7115/User/order/list?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIxMWU5OTlkYS1jNzdiLTQ5N2MtODZmYS0yNGZlNDM1NTg3Y2QiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc3MjQ3MDMwMn0.OhBZeXGGY1yNvG6dZlCbN64LkaMU96ckot3GvdHn_RY - 200 null application/json; charset=utf-8 1189.9055ms
+2026-03-02 09:45:16.346 -08:00 [INF] Application is shutting down...

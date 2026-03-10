@@ -1,4 +1,4 @@
-﻿using Application.DTOs;
+﻿using Application.DTOs.Order;
 using Application.Interfaces;
 using Domain.Entities;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -10,36 +10,73 @@ namespace API.Controllers
     [Route("[controller]")]
     public class OrderController
     {
-        private readonly IJwtParserInterface _jwt;
         private readonly IOrderInterface _order;
-        public OrderController(IJwtParserInterface jwt, IOrderInterface order)
+        private readonly IOffedOrder _offerOrder;
+        public OrderController(IJwtParserInterface jwt,
+            IOrderInterface order,
+            IOffedOrder offerOrder)
         {
-            _jwt = jwt;
             _order = order;
+            _offerOrder = offerOrder;
         }
         [HttpGet]
-        [Route("/cart")]
-        public async Task<ICollection<Order>> GetAllOrdersAsync([FromQuery]string token)
+        [Route("/order")]
+        public async Task<ICollection<OrdersListResponse>> GetAllOrdersAsync([FromQuery]string token)
         {
-
             var response = await _order.GetAllByUserAsync(token);
             return response;
-
         }
         [HttpPost]
-        [Route("/cart/create")]
+        [Route("/order/create")]
         public async Task<OrderResponse> CreateDraftAsync([FromQuery] string token)
         {
             var response = await _order.CreateDraftAsync(token);
             return response;
         }
         [HttpGet]
-        [Route("/cart/{orderId}")]
+        [Route("/order/{orderId}")]
         public async Task<OrderDetailResponse> GetOrderDetailsAsync([FromQuery] string token, [FromRoute] string orderId)
         {
             var orderIdGuid = Guid.Parse(orderId);
             var response = await _order.GetOrderDetailAsync(token, orderIdGuid);
             return response;
+        }
+        [HttpDelete]
+        [Route("/order/{orderId}/delete")]
+        public async Task<IActionResult> DeleteOderAsync([FromRoute]string orderId)
+        {
+            await _order.DeleteOrderAsync(Guid.Parse(orderId));
+            return new NoContentResult();
+        }
+        [HttpPost]
+        [Route("/order/{orderId}/pay")]
+        public async Task<IActionResult> PayForOrderAsync([FromQuery] string token, [FromRoute] Guid orderId)
+        {
+            try
+            {
+                await _offerOrder.CreateOffer(token, orderId);
+                return new OkResult();
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return new UnauthorizedObjectResult(ex.Message);
+            }
+        }
+        [HttpDelete]
+        [Route("/order/{orderId}/items/{productId}")]
+        public async Task<IActionResult> DeleteItemAsync([FromRoute]Guid orderId, [FromRoute]Guid productId)
+        {
+            await _order.DeleteProductAsync(productId, orderId);
+            return new OkResult();
+        }
+        [HttpPatch]
+        [Route("/order/{orderId}/items")]
+        public async Task<IActionResult> UpdateProductQuantityAsync([FromRoute]Guid orderId,
+            [FromQuery]Guid productId,
+            [FromQuery]int quantity)
+        {
+            await _order.UpdateProductQuantityAsync(orderId, productId, quantity);
+            return new NoContentResult();
         }
     }
 }

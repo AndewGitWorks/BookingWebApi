@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Application.DTOs
+namespace Application.DTOs.User
 {
     public record UpdateUserRoleDto(string Email, string Role);
 }

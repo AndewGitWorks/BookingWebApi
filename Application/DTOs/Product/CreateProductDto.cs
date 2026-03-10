@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Application.DTOs
+namespace Application.DTOs.Product
 {
     public record CreateProductDto(string Name,
         string Description,
