@@ -39,6 +39,7 @@ namespace Application.Services
             var list = await _productRepository.GetAllAsync();
             var response = list.Select(x => new ProductListResponse
             (
+                Id: x.Id,
                 Name: x.Name,
                 Description: x.Description,
                 Price: x.Price,
@@ -58,6 +59,7 @@ namespace Application.Services
             var item = await _productRepository.GetProductAsync(id);
             return new ProductResponseDto
             (
+                Id: item.Id,
                 Name: item.Name,
                 Description: item.Description,
                 Price: item.Price,
@@ -70,6 +72,7 @@ namespace Application.Services
             var products = await _productRepository.GetByNameAsync(name);
             var response = products.Select(p => new ProductResponseDto
             (
+                Id: p.Id,
                 Name: p.Name,
                 Description: p.Description,
                 Price: p.Price,
@@ -78,9 +81,18 @@ namespace Application.Services
             return response;
         }
 
-        public async Task UpdateProductAsync(Product product,Guid id)
+        public async Task UpdateProductAsync(UpdateProductDto product,Guid id)
         {
-            await _productRepository.UpdateProductAsync(product ,id);
+            var existingProduct = await _productRepository.GetProductAsync(id);
+            if (existingProduct == null)
+            {
+                throw new Exception("Product not found!");
+            }
+            existingProduct.Name = product.Name ?? existingProduct.Name;
+            existingProduct.Description = product.Description ?? existingProduct.Description;
+            existingProduct.Price = product.Price ?? existingProduct.Price;
+            existingProduct.QuantityInStock = product.Quantity ?? existingProduct.QuantityInStock;
+            await _productRepository.UpdateProductAsync(existingProduct ,id);
         }
     }
 }
