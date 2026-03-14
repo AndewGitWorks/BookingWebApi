@@ -82,11 +82,11 @@ namespace API.Controllers
             {
                 HttpContext.Response.Cookies.Delete("myToken");
                 var requestEmail = await _jwt.GetEmailFromClaimAsync(token);
-                //_logger.LogInformation("User with email: @{requestEmail}", requestEmail);
+                _logger.LogInformation("User with email: @{requestEmail}", requestEmail);
             }
             catch (Exception ex)
             {
-                //_logger.LogError(ex, "An error occurred while logging out.");
+                _logger.LogError(ex, "An error occurred while logging out.");
             }
         }
     }

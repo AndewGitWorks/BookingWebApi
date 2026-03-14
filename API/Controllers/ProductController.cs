@@ -26,14 +26,14 @@ namespace API.Controllers
             await _product.CreateProductAsync(request);
             return new OkResult();
         }
+        // [HttpGet]
+        // [Route("getAllbyName")]
+        // public async Task<ICollection<ProductResponseDto>> GetProductsByName([FromQuery] string name)
+        // {
+        //     return await _product.GetProductsByNameAsync(name);
+        // }
         [HttpGet]
-        [Route("getAllbyName")]
-        public async Task<ICollection<ProductResponseDto>> GetProductsByName([FromQuery] string name)
-        {
-            return await _product.GetProductsByNameAsync(name);
-        }
-        [HttpGet]
-        [Route("getall")]
+        [Route("/show")]
         public async Task<PagedResponse<ProductListResponse>> GetAllProducts([FromQuery]ProductSortModel sort)
         {
             var response = await _product.GetAllAsync();
@@ -95,7 +95,7 @@ namespace API.Controllers
             }
         }
         [HttpPost]
-        [Route("addProductToOrder")]
+        [Route("addToOrder")]
         public async Task<IActionResult> AddProductToOrder([FromQuery] string token, [FromQuery] Guid orderId, [FromQuery] Guid productId)
         {
             await _order.AddProductAsync(token, orderId, productId);

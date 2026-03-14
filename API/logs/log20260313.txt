@@ -1,0 +1,43 @@
+2026-03-13 18:42:39.444 -07:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-13 18:42:39.526 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-13 18:42:39.527 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 18:42:39.528 -07:00 [INF] Hosting environment: Development
+2026-03-13 18:42:39.529 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-13 18:42:58.841 -07:00 [INF] Application is shutting down...
+2026-03-13 18:45:20.157 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-13 18:45:20.194 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 18:45:20.195 -07:00 [INF] Hosting environment: Development
+2026-03-13 18:45:20.195 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-13 18:45:23.855 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-13 18:45:23.985 -07:00 [INF] HTTP GET /scalar/ responded 200 in 130.2630 ms
+2026-03-13 18:45:24.023 -07:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 9.3077 ms
+2026-03-13 18:45:24.037 -07:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 23.0338 ms
+2026-03-13 18:45:24.428 -07:00 [INF] HTTP GET /openapi/v1.json responded 200 in 141.9813 ms
+2026-03-13 18:45:26.938 -07:00 [INF] HTTP GET /scalar/ responded 200 in 1.0018 ms
+2026-03-13 18:45:26.962 -07:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 304 in 0.4424 ms
+2026-03-13 18:45:26.962 -07:00 [INF] HTTP GET /scalar/scalar.js responded 304 in 0.4425 ms
+2026-03-13 18:45:27.234 -07:00 [INF] HTTP GET /openapi/v1.json responded 200 in 11.5298 ms
+2026-03-13 18:45:59.754 -07:00 [INF] Application is shutting down...
+2026-03-13 18:46:05.064 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-13 18:46:05.092 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 18:46:05.093 -07:00 [INF] Hosting environment: Development
+2026-03-13 18:46:05.093 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-13 18:46:06.683 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-13 18:46:06.808 -07:00 [INF] HTTP GET /scalar/ responded 200 in 125.3332 ms
+2026-03-13 18:46:06.845 -07:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 6.8808 ms
+2026-03-13 18:46:06.858 -07:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 19.9572 ms
+2026-03-13 18:46:07.244 -07:00 [INF] HTTP GET /openapi/v1.json responded 200 in 142.7213 ms
+2026-03-13 18:46:18.189 -07:00 [INF] HTTP GET / responded 200 in 1023.7953 ms
+2026-03-13 18:46:30.726 -07:00 [INF] Application is shutting down...
+2026-03-13 18:47:21.171 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-13 18:47:21.199 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 18:47:21.200 -07:00 [INF] Hosting environment: Development
+2026-03-13 18:47:21.201 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-13 18:47:23.346 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-13 18:47:23.475 -07:00 [INF] HTTP GET /scalar/ responded 200 in 128.9104 ms
+2026-03-13 18:47:23.502 -07:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 7.6476 ms
+2026-03-13 18:47:23.513 -07:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 18.9940 ms
+2026-03-13 18:47:23.914 -07:00 [INF] HTTP GET /openapi/v1.json responded 200 in 147.4048 ms
+2026-03-13 18:47:40.293 -07:00 [INF] User logged in with email: test@test.com
+2026-03-13 18:47:40.298 -07:00 [INF] HTTP POST /login responded 200 in 1176.6944 ms
+2026-03-13 18:48:35.887 -07:00 [INF] Application is shutting down...
