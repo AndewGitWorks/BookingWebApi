@@ -63,9 +63,9 @@ namespace Infrastructure.CrudRepository
             return new List<Product>();
         }
 
-        public Task UpdateProductAsync(Product product, Guid id)
+        public async Task UpdateProductAsync(Product product, Guid id)
         {
-            throw new NotImplementedException();
+            await _context.SaveChangesAsync();
         }
     }
 }
