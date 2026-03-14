@@ -1,4 +1,5 @@
-﻿using Application.DTOs.Product;
+﻿using API.Models;
+using Application.DTOs.Product;
 using Application.Interfaces;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -33,7 +34,7 @@ namespace API.Controllers
         }
         [HttpGet]
         [Route("getall")]
-        public async Task<ICollection<ProductListResponse>> GetAllProducts()
+        public async Task<ICollection<ProductListResponse>> GetAllProducts([FromQuery]ProductSortModel sort)
         {
             var response = await _product.GetAllAsync();
             return response;

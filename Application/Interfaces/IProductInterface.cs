@@ -12,6 +12,7 @@ namespace Application.Interfaces
         public Task<List<ProductResponseDto>> GetProductsByNameAsync(string name);
         public Task<ProductResponseDto> GetProductForResponseAsync(Guid id);
         public Task<Product> GetProductById(Guid id);
-        public Task<List<ProductListResponse>> GetAllAsync();
+        public Task<List<ProductListResponse>> GetAllAsync(int? page = 0, int? pageSize = 0, string? search = "", decimal? minPrice = 0,
+            decimal? maxPrice = 0);
     }
 }

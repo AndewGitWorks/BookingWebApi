@@ -33,7 +33,8 @@ namespace Application.Services
             await _productRepository.DeleteProductAsync(id);
         }
 
-        public async Task<List<ProductListResponse>> GetAllAsync()
+        public async Task<List<ProductListResponse>> GetAllAsync(int? page = 0, int? pageSize = 0, string? search = "", decimal? minPrice = 0,
+            decimal? maxPrice = 0)
         {
             var list = await _productRepository.GetAllAsync();
             var response = list.Select(x => new ProductListResponse

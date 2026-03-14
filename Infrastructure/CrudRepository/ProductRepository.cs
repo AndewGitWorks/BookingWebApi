@@ -58,6 +58,11 @@ namespace Infrastructure.CrudRepository
                 .FirstOrDefaultAsync(x => x.Id == id) ?? throw new NotImplementedException();
         }
 
+        public async Task<IEnumerable<Product>> GetSorted()
+        {
+            return new List<Product>();
+        }
+
         public Task UpdateProductAsync(Product product, Guid id)
         {
             throw new NotImplementedException();

@@ -1,6 +1,0 @@
-2026-03-06 04:11:34.170 -08:00 [INF] User profile is available. Using 'C:\Users\usr\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
-2026-03-06 04:11:34.420 -08:00 [INF] Now listening on: https://localhost:7115
-2026-03-06 04:11:34.422 -08:00 [INF] Now listening on: http://localhost:5215
-2026-03-06 04:11:34.580 -08:00 [INF] Application started. Press Ctrl+C to shut down.
-2026-03-06 04:11:34.581 -08:00 [INF] Hosting environment: Development
-2026-03-06 04:11:34.582 -08:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
