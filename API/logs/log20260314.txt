@@ -1,0 +1,22 @@
+2026-03-14 14:07:20.179 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-14 14:07:20.213 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-14 14:07:20.215 -07:00 [INF] Hosting environment: Development
+2026-03-14 14:07:20.216 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-14 14:07:24.456 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-14 14:07:24.646 -07:00 [INF] HTTP GET /scalar/ responded 200 in 190.3384 ms
+2026-03-14 14:07:24.686 -07:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 12.8582 ms
+2026-03-14 14:07:24.706 -07:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 32.4972 ms
+2026-03-14 14:07:25.089 -07:00 [INF] HTTP GET /openapi/v1.json responded 200 in 156.6828 ms
+2026-03-14 14:07:51.725 -07:00 [INF] User logged in with email: test@test.com
+2026-03-14 14:07:51.730 -07:00 [INF] HTTP POST /login responded 200 in 1686.6026 ms
+2026-03-14 14:10:49.851 -07:00 [ERR] An error occurred while logging in.
+System.Exception: User not found
+   at Infrastructure.CrudRepository.UserRepository.GetByEmailAsync(String email) in C:\Users\usr\source\repos\Booking\Infrastructure\CrudRepository\UserRepository.cs:line 34
+   at Application.Services.AuthService.Login(LoginRequestDto request) in C:\Users\usr\source\repos\Booking\Application\Services\AuthService.cs:line 28
+   at API.Controllers.AuthController.Login(LoginRequestDto request) in C:\Users\usr\source\repos\Booking\API\Controllers\AuthController.cs:line 35
+2026-03-14 14:10:49.881 -07:00 [ERR] Error @System.Exception: User not found
+   at Infrastructure.CrudRepository.UserRepository.GetByEmailAsync(String email) in C:\Users\usr\source\repos\Booking\Infrastructure\CrudRepository\UserRepository.cs:line 34
+   at Application.Services.AuthService.Login(LoginRequestDto request) in C:\Users\usr\source\repos\Booking\Application\Services\AuthService.cs:line 28
+   at API.Controllers.AuthController.Login(LoginRequestDto request) in C:\Users\usr\source\repos\Booking\API\Controllers\AuthController.cs:line 35 User with @test1@test.com
+2026-03-14 14:10:49.883 -07:00 [ERR] HTTP POST /login responded 500 in 100.4364 ms
+2026-03-14 14:47:37.060 -07:00 [INF] Application is shutting down...

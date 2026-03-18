@@ -35,15 +35,15 @@ namespace API.Controllers
         //    await _userInterface.UpdateAsync(request);
         //    return new OkResult();
         //}
-        [HttpGet]
-        [Route("order/list")]
-        public async Task<List<OrdersListResponse>> GetAllOrdersAsync([FromQuery]string token)
-        {
-            var result = await _jwtParserInterface.GetId(token);
-            var request = await _userInterface.GetByIdAsync(result);
-            var response = await _orderInterface.GetAllByUserAsync(token);
-            _logger.LogInformation("User: {@request} Action: Show all orders", request);
-            return response;
-        }
+        // [HttpGet]
+        // [Route("order/list")]
+        // public async Task<List<OrdersListResponse>> GetAllOrdersAsync([FromQuery]string token)
+        // {
+        //     var result = await _jwtParserInterface.GetId(token);
+        //     var request = await _userInterface.GetByIdAsync(result);
+        //     var response = await _orderInterface.GetAllByUserAsync(token);
+        //     _logger.LogInformation("User: {@request} Action: Show all orders", request);
+        //     return response;
+        // }
     }
 }

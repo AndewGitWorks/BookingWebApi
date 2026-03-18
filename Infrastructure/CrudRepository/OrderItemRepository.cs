@@ -15,7 +15,7 @@ namespace Infrastructure.CrudRepository
         {
             _context = context;
         }
-        public async Task CreateAsync(Guid orderId, Product product)
+        public async Task CreateAsync(Guid orderId, Product product, CancellationToken cancellationToken)
         {
             var item = new OrderItem
             {
@@ -23,18 +23,18 @@ namespace Infrastructure.CrudRepository
                 ProductId = product.Id,
                 Product = product,
             };
-            await _context.OrderItems.AddAsync(item);
-            await _context.SaveChangesAsync();
+            await _context.OrderItems.AddAsync(item, cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
 
         }
 
-        public async Task DeleteAsync(Guid orderId, Guid productId)
+        public async Task DeleteAsync(Guid orderId, Guid productId, CancellationToken cancellationToken)
         {
             var item = await _context.OrderItems.FirstOrDefaultAsync(
                 x => x.ProductId == productId && 
-                x.OrderId == orderId) ?? throw new Exception("Cannot remove, not found!");
+                x.OrderId == orderId, cancellationToken) ?? throw new Exception("Cannot remove, not found!");
             _context.OrderItems.Remove(item);
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync(cancellationToken);
         }
 
         //public async Task<List<OrderItem>> GetAllAsync(Guid orderId)

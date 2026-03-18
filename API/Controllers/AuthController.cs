@@ -48,8 +48,8 @@ namespace API.Controllers
             }
             catch (Exception ex)
             {
-                //_logger.LogError(ex, "An error occurred while logging in.");
-                //_logger.LogError("Error @{ex.Message} User with @{request.Email}", ex, request.Email);
+                _logger.LogError(ex, "An error occurred while logging in.");
+                _logger.LogError("Error @{ex.Message} User with @{request.Email}", ex, request.Email);
                 return StatusCode(500, "An error occurred while processing your request.");
             }
         }
@@ -65,12 +65,12 @@ namespace API.Controllers
                 {
                     HttpOnly = true
                 });
-                //_logger.LogInformation("User registered with email: {Email}", request.Email);
+                _logger.LogInformation("User registered with email: {Email}", request.Email);
                 return Ok(token);
             }
             catch (Exception ex)
             {
-                //_logger.LogError("Registration Error @{ex.Message}", ex.Message);
+                _logger.LogError("Registration Error @{ex.Message}", ex.Message);
                 return StatusCode(500, "An error occurred while processing your request.");
             }
         }
@@ -86,7 +86,7 @@ namespace API.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "An error occurred while logging out.");
+                _logger.LogError("An error occurred while logging out.@{ex.Message}", ex.Message);
             }
         }
     }

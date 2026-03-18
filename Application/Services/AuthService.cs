@@ -23,9 +23,9 @@ namespace Application.Services
             _jwtInterface = jwtInterface;
             _usr = usr;
         }
-        public async Task<string> Login(LoginRequestDto request)
+        public async Task<string> Login(LoginRequestDto request, CancellationToken cancellationToken = default)
         {
-            var user = await _userRepository.GetByEmailAsync(request.Email);
+            var user = await _userRepository.GetByEmailAsync(request.Email, cancellationToken);
             var requestHash = new PasswordHasher<User>().VerifyHashedPassword(user, user.PasswordHash, request.Password);
             if (requestHash == PasswordVerificationResult.Success)
             {
@@ -33,13 +33,13 @@ namespace Application.Services
             }
             throw new Exception("Unauthorized! Wrong password or email");
         }
-        public async Task<string> Registration(RegistrationRequestDto request)
+        public async Task<string> Registration(RegistrationRequestDto request, CancellationToken cancellationToken = default)
         {
             if(request.Password != request.ExtraPassword)
             {
                 throw new Exception("Passwords do not match");
             }
-            var newUser = await _usr.CreateUserAsync(request);
+            var newUser = await _usr.CreateUserAsync(request, cancellationToken);
             var token = _jwtInterface.GenerateToken(newUser);
             return token;
         }

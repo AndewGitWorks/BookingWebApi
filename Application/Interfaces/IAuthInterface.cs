@@ -7,7 +7,7 @@ namespace Application.Interfaces
 {
     public interface IAuthInterface
     {
-        public Task<string> Login(LoginRequestDto request);
-        public Task<string> Registration(RegistrationRequestDto request);
+        public Task<string> Login(LoginRequestDto request, CancellationToken cancellationToken = default);
+        public Task<string> Registration(RegistrationRequestDto request, CancellationToken cancellationToken = default);
     }
 }

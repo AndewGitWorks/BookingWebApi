@@ -18,34 +18,34 @@ namespace Infrastructure.CrudRepository
         {
             _context = context;
         }
-        public async Task AddUserAsync(User usr)
+        public async Task AddUserAsync(User usr, CancellationToken cancellationToken)
         {
-            await _context.Users.AddAsync(usr);
-            await _context.SaveChangesAsync();
+            await _context.Users.AddAsync(usr, cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
         }
 
-        public Task DeleteUserAsync()
+        public Task DeleteUserAsync(CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<User> GetByEmailAsync(string email)
+        public async Task<User> GetByEmailAsync(string email, CancellationToken cancellationToken)
         {
-            return await _context.Users.FirstOrDefaultAsync(u => u.Email == email) ?? throw new Exception("User not found");
+            return await _context.Users.FirstOrDefaultAsync(u => u.Email == email, cancellationToken) ?? throw new Exception("User not found");
         }
 
-        public async Task<User> GetByIdAsync(Guid id)
+        public async Task<User> GetByIdAsync(Guid id, CancellationToken cancellationToken)
         {
-            return await _context.Users.FirstOrDefaultAsync(x => x.Id == id)
+            return await _context.Users.FirstOrDefaultAsync(x => x.Id == id, cancellationToken)
                 ?? throw new Exception("User not found");
         }
 
-        public Task GetUserAsync()
+        public Task GetUserAsync(CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
 
-        public Task UpdateUserAsync()
+        public Task UpdateUserAsync(CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }

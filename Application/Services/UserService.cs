@@ -16,17 +16,17 @@ namespace Application.Services
         {
             _userRepository = user;
         }
-        public Task ChangeEmailAsync()
+        public Task ChangeEmailAsync(CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
 
-        public Task ChangeRoleAsync()
+        public Task ChangeRoleAsync(CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<User> CreateUserAsync(RegistrationRequestDto request)
+        public async Task<User> CreateUserAsync(RegistrationRequestDto request, CancellationToken cancellationToken = default)
         {
             if(request.Password != request.ExtraPassword)
             {
@@ -41,13 +41,13 @@ namespace Application.Services
             };
             var passHashed = new PasswordHasher<User>().HashPassword(usr, request.Password);
             usr.PasswordHash = passHashed;
-            await _userRepository.AddUserAsync(usr);
+            await _userRepository.AddUserAsync(usr, cancellationToken);
             return usr;
         }
 
-        public async Task<User> GetUserByIdAsync(Guid id)
+        public async Task<User> GetUserByIdAsync(Guid id, CancellationToken cancellationToken = default)
         {
-            return await _userRepository.GetByIdAsync(id)
+            return await _userRepository.GetByIdAsync(id, cancellationToken)
                 ?? throw new Exception("User not found");
         }
     }

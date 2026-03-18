@@ -31,21 +31,21 @@ namespace Infrastructure.CrudRepository
         //    await _context.SaveChangesAsync();
         //}
 
-        public async Task ConfirmOrderAsync(Order order)
+        public async Task ConfirmOrderAsync(Order order, CancellationToken token)
         {
-            await _context.Orders.AddAsync(order);
-            await _context.SaveChangesAsync();
+            await _context.Orders.AddAsync(order, token);
+            await _context.SaveChangesAsync(token);
         }
 
-        public async Task DeleteOrderAsync(Guid id)
+        public async Task DeleteOrderAsync(Guid id, CancellationToken token)
         {
             var order = await _context.Orders.FirstOrDefaultAsync(x => x.Id == id)
                 ?? throw new KeyNotFoundException("Order not found");
             _context.Orders.Remove(order);
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync(token);
         }
 
-        public async Task<List<OrdersListResponse>> GetByUser(Guid id)
+        public async Task<List<OrdersListResponse>> GetByUser(Guid id, CancellationToken token)
         {
             return await _context.Orders
                 .Where(x => x.UserId == id)
@@ -65,14 +65,14 @@ namespace Infrastructure.CrudRepository
              .ToListAsync();
         }
 
-        public async Task<Order?> GetDraftOrderAsync(Guid id)
+        public async Task<Order?> GetDraftOrderAsync(Guid id, CancellationToken token)
         {
             return await _context.Orders.FirstOrDefaultAsync
                 (x => x.Id == id && x.Status == OrderStatus.Draft)
                 ?? throw new KeyNotFoundException("Draft order not found");
         }
 
-        public async Task<Order> GetOrderAsync(Guid id)
+        public async Task<Order> GetOrderAsync(Guid id, CancellationToken token)
         {
             return await _context.Orders
                 .Include(i => i.Items)

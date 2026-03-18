@@ -8,12 +8,12 @@ namespace Application.Interfaces.DbInterfaces
 {
     public interface IOrderDbInterface
     {
-        public Task ConfirmOrderAsync(Order order);
-        public Task DeleteOrderAsync(Guid id);
+        public Task ConfirmOrderAsync(Order order, CancellationToken token);
+        public Task DeleteOrderAsync(Guid id, CancellationToken token);
         public Task UpdateOrderAsync(Order order, CancellationToken ct);
-        public Task<Order> GetOrderAsync(Guid id);
-        public Task<Order?> GetDraftOrderAsync(Guid id);
-        public Task<List<OrdersListResponse>> GetByUser(Guid id);
+        public Task<Order> GetOrderAsync(Guid id, CancellationToken token);
+        public Task<Order?> GetDraftOrderAsync(Guid id, CancellationToken token);
+        public Task<List<OrdersListResponse>> GetByUser(Guid id, CancellationToken token);
         public Task SaveChangesAsync(CancellationToken ct);
         //public Task AddProductAsync(Order order,Product product, int quantity);
     }

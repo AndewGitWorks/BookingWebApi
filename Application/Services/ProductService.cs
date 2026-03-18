@@ -16,7 +16,7 @@ namespace Application.Services
         {
             _productRepository = product;
         }
-        public async Task CreateProductAsync(CreateProductDto request)
+        public async Task CreateProductAsync(CreateProductDto request, CancellationToken cancellationToken = default)
         {
             var product = new Product
             {
@@ -25,18 +25,18 @@ namespace Application.Services
                 Price = request.Price,
                 QuantityInStock = request.Quantity
             };
-            await _productRepository.AddProductAsync(product);
+            await _productRepository.AddProductAsync(product, cancellationToken);
         }
 
-        public async Task DeleteProductAsync(Guid id)
+        public async Task DeleteProductAsync(Guid id, CancellationToken cancellationToken = default)
         {
-            await _productRepository.DeleteProductAsync(id);
+            await _productRepository.DeleteProductAsync(id, cancellationToken);
         }
 
         public async Task<List<ProductListResponse>> GetAllAsync(int? page = 0, int? pageSize = 0, string? search = "", decimal? minPrice = 0,
-            decimal? maxPrice = 0)
+            decimal? maxPrice = 0, CancellationToken cancellationToken = default)
         {
-            var list = await _productRepository.GetAllAsync();
+            var list = await _productRepository.GetAllAsync(cancellationToken);
             var response = list.Select(x => new ProductListResponse
             (
                 Id: x.Id,
@@ -48,15 +48,15 @@ namespace Application.Services
             return response;
         }
 
-        public Task<Product> GetProductById(Guid id)
+        public Task<Product> GetProductById(Guid id, CancellationToken cancellationToken = default)
         {
-            var item = _productRepository.GetProductAsync(id);
+            var item = _productRepository.GetProductAsync(id, cancellationToken);
             return item ?? throw new Exception("Product not found!");
         }
 
-        public async Task<ProductResponseDto> GetProductForResponseAsync(Guid id)
+        public async Task<ProductResponseDto> GetProductForResponseAsync(Guid id, CancellationToken cancellationToken = default)
         {
-            var item = await _productRepository.GetProductAsync(id);
+            var item = await _productRepository.GetProductAsync(id, cancellationToken);
             return new ProductResponseDto
             (
                 Id: item.Id,
@@ -67,9 +67,9 @@ namespace Application.Services
             );
         }
 
-        public async Task<List<ProductResponseDto>> GetProductsByNameAsync(string name)
+        public async Task<List<ProductResponseDto>> GetProductsByNameAsync(string name, CancellationToken cancellationToken = default)
         {
-            var products = await _productRepository.GetByNameAsync(name);
+            var products = await _productRepository.GetByNameAsync(name, cancellationToken);
             var response = products.Select(p => new ProductResponseDto
             (
                 Id: p.Id,
@@ -81,18 +81,15 @@ namespace Application.Services
             return response;
         }
 
-        public async Task UpdateProductAsync(UpdateProductDto product,Guid id)
+        public async Task UpdateProductAsync(UpdateProductDto product, Guid id, CancellationToken cancellationToken = default)
         {
-            var existingProduct = await _productRepository.GetProductAsync(id);
-            if (existingProduct == null)
-            {
-                throw new Exception("Product not found!");
-            }
+            var existingProduct = await _productRepository.GetProductAsync(id, cancellationToken)
+                ?? throw new Exception("Product not found!");
             existingProduct.Name = product.Name ?? existingProduct.Name;
             existingProduct.Description = product.Description ?? existingProduct.Description;
             existingProduct.Price = product.Price ?? existingProduct.Price;
             existingProduct.QuantityInStock = product.Quantity ?? existingProduct.QuantityInStock;
-            await _productRepository.UpdateProductAsync(existingProduct ,id);
+            await _productRepository.UpdateProductAsync(existingProduct, id, cancellationToken);
         }
     }
 }

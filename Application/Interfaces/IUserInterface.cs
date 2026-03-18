@@ -8,9 +8,9 @@ namespace Application.Interfaces
 {
     public interface IUserInterface
     {
-        public Task<User> GetUserByIdAsync(Guid id);
-        public Task ChangeRoleAsync();
-        public Task ChangeEmailAsync();
-        public Task<User> CreateUserAsync(RegistrationRequestDto request);
+        public Task<User> GetUserByIdAsync(Guid id, CancellationToken cancellationToken = default);
+        public Task ChangeRoleAsync(CancellationToken cancellationToken = default);
+        public Task ChangeEmailAsync(CancellationToken cancellationToken = default);
+        public Task<User> CreateUserAsync(RegistrationRequestDto request, CancellationToken cancellationToken = default);
     }
 }
