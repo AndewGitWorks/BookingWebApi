@@ -18,11 +18,10 @@ namespace Application.Services.OfferManagingService
             _userInterface = userInterface;
             _orderInterface = orderInterface;
         }
-        public async Task CreateOffer(string token, Guid orderId)
+        public async Task CreateOffer(Guid userId, Guid orderId, CancellationToken ct)
         {
-            var actualUserId = await _jwtInterface.GetId(token);
-            var user = await _userInterface.GetUserByIdAsync(actualUserId);
-            var order = await _orderInterface.GetOrderById(orderId);
+            var user = await _userInterface.GetUserByIdAsync(userId, ct);
+            var order = await _orderInterface.GetOrderById(orderId, ct);
             if(user.Id != order.UserId)
             {
                 throw new UnauthorizedAccessException("You are not authorized to pay for this order.");

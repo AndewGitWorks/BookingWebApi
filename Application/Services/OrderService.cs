@@ -56,7 +56,12 @@ namespace Application.Services
                 Items = new List<OrderItem>()
             };
             await _order.ConfirmOrderAsync(newDraftCard, cancellationToken);
-            var response = new OrderResponse(newDraftCard.Id, newDraftCard.CreatedAt, newDraftCard.Status);
+            var response = new OrderResponse
+            {
+                Id = newDraftCard.Id,
+                CreatedAt = newDraftCard.CreatedAt,
+                Status = nameof(newDraftCard.Status)
+            };
             return response;
         }
 
@@ -75,10 +80,9 @@ namespace Application.Services
             await _orderItem.DeleteAsync(productId, orderId, cancellationToken);
         }
 
-        public async Task<List<OrdersListResponse>> GetAllByUserAsync(string token, CancellationToken cancellationToken = default)
-        {
-            var usrId = await _jwt.GetId(token);
-            var items = await _order.GetByUser(usrId, cancellationToken);
+        public async Task<OrdersListResponse> GetAllByUserAsync(Guid id, CancellationToken cancellationToken = default)
+        { 
+            var items = await _order.GetByUser(id, cancellationToken);
             return items ?? throw new Exception("Cart is empty");
         }
 
@@ -105,6 +109,14 @@ namespace Application.Services
                     Quantity = x.Quantity,
                 }).ToList()
             } ?? throw new Exception("Order not found");
+            return response;
+        }
+
+        public async Task<List<OrderResponse>> GetOrdersByStatusAsync(string token, string status, CancellationToken cancellationToken = default)
+        {
+            var usrId = await _jwt.GetId(token);
+            var orderStatus = Enum.Parse<OrderStatus>(status);
+            var response = await _order.GetOrdersByStatusAsync(usrId, orderStatus, cancellationToken);
             return response;
         }
 

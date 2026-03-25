@@ -2,5 +2,10 @@ using Domain.Enums;
 
 namespace Application.DTOs.Order
 {
-    public record OrderResponse(Guid Id, DateTime CreatedAt, OrderStatus Status);
+    public class OrderResponse
+    {
+        public Guid Id { get; set; }
+        public string? Status { get; set; }
+        public DateTime CreatedAt { get; set; }
+    };
 }

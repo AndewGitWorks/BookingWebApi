@@ -6,6 +6,6 @@ namespace Application.Interfaces
 {
     public interface IOffedOrder
     {
-        public Task CreateOffer(string token, Guid orderId);
+        public Task CreateOffer(Guid userId, Guid orderId, CancellationToken ct);
     }
 }
