@@ -1,0 +1,11 @@
+2026-03-22 20:21:03.941 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-22 20:21:03.971 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-22 20:21:04.142 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-22 20:21:04.142 -07:00 [INF] Hosting environment: Development
+2026-03-22 20:21:04.143 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-22 20:21:07.781 -07:00 [INF] HTTP GET /catalog responded 404 in 74.5221 ms
+2026-03-22 20:21:25.562 -07:00 [INF] HTTP GET /product/catalog responded 200 in 1685.1633 ms
+2026-03-22 20:24:34.499 -07:00 [INF] User logged in with email: test@test.com, at "2026-03-23T03:24:34.4987106Z"
+2026-03-22 20:24:34.503 -07:00 [INF] HTTP POST /login responded 200 in 321.9313 ms
+2026-03-22 20:26:00.192 -07:00 [INF] HTTP POST /product/create responded 200 in 197.3784 ms
+2026-03-22 20:31:42.699 -07:00 [INF] Application is shutting down...

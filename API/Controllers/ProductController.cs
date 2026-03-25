@@ -1,6 +1,7 @@
 ﻿using API.Models;
 using Application.DTOs.Product;
 using Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,9 +9,8 @@ namespace API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ProductController
+    public class ProductController : ControllerBase
     {
-        // Implementation will go here
         private readonly IProductInterface _product;
         private readonly IOrderInterface _order;
         public ProductController(IProductInterface product,
@@ -19,12 +19,13 @@ namespace API.Controllers
             _product = product;
             _order = order;
         }
+        [Authorize]
         [HttpPost]
-        [Route("add")]
-        public async Task<IActionResult> CreateProduct(CreateProductDto request)
+        [Route("create")]
+        public async Task<IActionResult> CreateProduct(CreateProductDto request, CancellationToken cancellationToken)
         {
-            await _product.CreateProductAsync(request);
-            return new OkResult();
+            await _product.CreateProductAsync(request, cancellationToken);
+            return Ok("Product has been created");
         }
         // [HttpGet]
         // [Route("getAllbyName")]
@@ -33,15 +34,15 @@ namespace API.Controllers
         //     return await _product.GetProductsByNameAsync(name);
         // }
         [HttpGet]
-        [Route("/show")]
-        public async Task<PagedResponse<ProductListResponse>> GetAllProducts([FromQuery]ProductSortModel sort)
+        [Route("catalog")]
+        public async Task<PagedResponse<ProductListResponse>> GetAllProducts([FromQuery]ProductSortModel sort, CancellationToken cancellationToken)
         {
-            var response = await _product.GetAllAsync();
+            var response = await _product.GetAllAsync(cancellationToken: cancellationToken);
             if(sort.IsAscending && sort.IsDescending)
             {
                 throw new ArgumentException("Cannot sort by both ascending and descending order.");
             }
-            if(sort.IsDescending)
+            if (sort.IsDescending)
             {
                 response = response.OrderByDescending(p => p.Price).ToList();
             }
@@ -81,12 +82,12 @@ namespace API.Controllers
             return finalResponse;
         }
         [HttpPatch]
-        [Route("/{id}/update")]
-        public async Task<IActionResult> UpdateProduct([FromRoute] Guid id, [FromBody] UpdateProductDto request)
+        [Route("{productId}/update")]
+        public async Task<IActionResult> UpdateProduct([FromRoute] Guid productId, [FromBody] UpdateProductDto request, CancellationToken cancellationToken)
         {
             try
             {
-                await _product.UpdateProductAsync(request, id);
+                await _product.UpdateProductAsync(request, productId, cancellationToken);
                 return new OkResult();
             }
             catch (Exception e)
@@ -95,32 +96,32 @@ namespace API.Controllers
             }
         }
         [HttpPost]
-        [Route("addToOrder")]
-        public async Task<IActionResult> AddProductToOrder([FromQuery] string token, [FromQuery] Guid orderId, [FromQuery] Guid productId)
+        [Route("{productId}/add/{orderId}")]
+        public async Task<IActionResult> AddProductToOrder([FromQuery] string token, [FromRoute] Guid orderId, [FromRoute] Guid productId, CancellationToken cancellationToken)
         {
-            await _order.AddProductAsync(token, orderId, productId);
-            return new OkResult();
+            await _order.AddProductAsync(token, orderId, productId, cancellationToken);
+            return Ok("Product has been added");
         }
         [HttpDelete]
-        [Route("delete")]
-        public async Task<IActionResult> DeleteProduct([FromQuery] Guid id)
+        [Route("{productId}/delete")]
+        public async Task<IActionResult> DeleteProduct([FromRoute] Guid productId, CancellationToken cancellationToken)
         {
             try
             {
-                await _product.DeleteProductAsync(id);
-                return new OkResult();
+                await _product.DeleteProductAsync(productId, cancellationToken);
+                return Ok("Product has been deleted");
             }
             catch (Exception)
             {
-                return new NotFoundResult();
+                return BadRequest();
             }
         }
         [HttpGet]
-        [Route("/products")]
-        public async Task<ActionResult<ProductResponseDto>> GetProductAsync([FromQuery]Guid productId)
+        [Route("{productId}")]
+        public async Task<ActionResult<ProductResponseDto>> GetProductAsync([FromRoute]Guid productId, CancellationToken cancellationToken)
         {
-            var response = await _product.GetProductForResponseAsync(productId);
-            return response;
+            var response = await _product.GetProductForResponseAsync(productId, cancellationToken);
+            return Ok(response);
         }
     }
 }

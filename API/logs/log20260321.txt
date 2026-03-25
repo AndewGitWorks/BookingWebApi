@@ -1,0 +1,340 @@
+2026-03-21 11:45:56.963 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-21 11:45:56.994 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-21 11:45:56.995 -07:00 [INF] Hosting environment: Development
+2026-03-21 11:45:56.996 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-21 11:46:00.782 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-21 11:46:00.885 -07:00 [INF] HTTP GET /registration responded 405 in 103.1839 ms
+2026-03-21 11:46:17.192 -07:00 [INF] User registered with email: newemailuser@email.com
+2026-03-21 11:46:17.198 -07:00 [INF] HTTP POST /registration responded 200 in 1612.7933 ms
+2026-03-21 11:47:48.277 -07:00 [INF] Application is shutting down...
+2026-03-21 11:47:58.534 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-21 11:47:58.566 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-21 11:47:58.567 -07:00 [INF] Hosting environment: Development
+2026-03-21 11:47:58.568 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-21 11:47:59.919 -07:00 [INF] Application is shutting down...
+2026-03-21 12:14:48.380 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-21 12:14:48.411 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-21 12:14:48.593 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-21 12:14:48.594 -07:00 [INF] Hosting environment: Development
+2026-03-21 12:14:48.594 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-21 12:14:52.776 -07:00 [INF] HTTP GET / responded 404 in 54.9863 ms
+2026-03-21 12:14:52.810 -07:00 [INF] HTTP GET /favicon.ico responded 404 in 0.5836 ms
+2026-03-21 12:14:59.615 -07:00 [INF] HTTP GET /ысфдфк responded 404 in 10.6238 ms
+2026-03-21 12:15:07.945 -07:00 [INF] HTTP GET /scalar/ responded 200 in 128.3454 ms
+2026-03-21 12:15:08.020 -07:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 43.6791 ms
+2026-03-21 12:15:08.046 -07:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 69.6968 ms
+2026-03-21 12:15:08.291 -07:00 [INF] HTTP GET /openapi/v1.json responded 200 in 16.7448 ms
+2026-03-21 12:15:08.411 -07:00 [INF] HTTP GET /favicon.ico responded 404 in 0.0927 ms
+2026-03-21 12:15:08.697 -07:00 [INF] HTTP GET /scalar/favicon.svg responded 200 in 0.5268 ms
+2026-03-21 12:15:41.281 -07:00 [INF] HTTP GET /scalar/ responded 200 in 0.7182 ms
+2026-03-21 12:15:50.351 -07:00 [INF] HTTP GET /scalar/ responded 200 in 1.6604 ms
+2026-03-21 12:15:50.444 -07:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 304 in 1.1465 ms
+2026-03-21 12:15:50.444 -07:00 [INF] HTTP GET /scalar/scalar.js responded 304 in 1.2628 ms
+2026-03-21 12:15:50.758 -07:00 [INF] HTTP GET /openapi/v1.json responded 200 in 10.1946 ms
+2026-03-21 12:16:09.853 -07:00 [INF] User logged in with email: test@test.com
+2026-03-21 12:16:09.863 -07:00 [INF] HTTP POST /login responded 200 in 1468.6564 ms
+2026-03-21 12:19:16.751 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-21 12:19:16.785 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-21 12:19:16.993 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-21 12:19:16.994 -07:00 [INF] Hosting environment: Development
+2026-03-21 12:19:16.995 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-21 12:19:23.680 -07:00 [INF] User logged in with email: test@test.com, at @"2026-03-21T19:19:23.6801159Z"
+2026-03-21 12:19:23.696 -07:00 [INF] HTTP POST /login responded 200 in 1470.1803 ms
+2026-03-21 12:25:17.852 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-21 12:25:17.879 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-21 12:25:17.915 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-21 12:25:17.916 -07:00 [INF] Hosting environment: Development
+2026-03-21 12:25:17.916 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-21 12:25:45.832 -07:00 [INF] HTTP GET /orders responded 401 in 29.9919 ms
+2026-03-21 12:26:20.565 -07:00 [INF] HTTP GET /openapi/v1.json responded 200 in 35.9927 ms
+2026-03-21 12:28:18.242 -07:00 [INF] User logged in with email: test@test.com, at "2026-03-21T19:28:18.2416644Z"
+2026-03-21 12:28:18.250 -07:00 [INF] HTTP POST /login responded 200 in 1224.3258 ms
+2026-03-21 12:29:13.008 -07:00 [INF] HTTP GET /orders responded 401 in 34.6834 ms
+2026-03-21 12:29:17.898 -07:00 [INF] HTTP GET /orders responded 401 in 9.7233 ms
+2026-03-21 12:29:37.203 -07:00 [INF] HTTP GET /orders responded 401 in 0.3621 ms
+2026-03-21 12:29:42.609 -07:00 [INF] HTTP GET /orders responded 400 in 39.5188 ms
+2026-03-21 12:30:00.873 -07:00 [INF] HTTP GET /orders responded 200 in 131.0163 ms
+2026-03-21 12:33:56.708 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-21 12:33:56.734 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-21 12:33:56.889 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-21 12:33:56.890 -07:00 [INF] Hosting environment: Development
+2026-03-21 12:33:56.891 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-21 12:35:02.616 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-21 12:35:02.642 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-21 12:35:02.797 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-21 12:35:02.798 -07:00 [INF] Hosting environment: Development
+2026-03-21 12:35:02.799 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-21 12:35:14.243 -07:00 [INF] HTTP GET /orders responded 200 in 1236.2155 ms
+2026-03-21 12:35:23.017 -07:00 [INF] HTTP GET /orders responded 401 in 9.0519 ms
+2026-03-21 12:35:27.597 -07:00 [INF] User logged in with email: test@test.com, at "2026-03-21T19:35:27.5968645Z"
+2026-03-21 12:35:27.601 -07:00 [INF] HTTP POST /login responded 200 in 230.9335 ms
+2026-03-21 12:35:47.323 -07:00 [INF] HTTP GET /orders responded 401 in 1.6829 ms
+2026-03-21 12:36:01.494 -07:00 [INF] HTTP GET /orders responded 200 in 20.4419 ms
+2026-03-21 12:37:32.265 -07:00 [INF] User registered with email: test12@test.com
+2026-03-21 12:37:32.267 -07:00 [INF] HTTP POST /registration responded 200 in 190.9118 ms
+2026-03-21 12:38:59.756 -07:00 [INF] HTTP GET /orders responded 200 in 10.0859 ms
+2026-03-21 12:39:50.038 -07:00 [INF] HTTP GET /orders responded 200 in 2.7005 ms
+2026-03-21 12:43:57.204 -07:00 [INF] User logged in with email: test@test.com, at "2026-03-21T19:43:57.2045885Z"
+2026-03-21 12:43:57.206 -07:00 [INF] HTTP POST /login responded 200 in 92.3070 ms
+2026-03-21 12:44:15.859 -07:00 [INF] HTTP POST /logout responded 400 in 22.3042 ms
+2026-03-21 12:44:23.377 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-21 12:44:23.403 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-21 12:44:23.559 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-21 12:44:23.560 -07:00 [INF] Hosting environment: Development
+2026-03-21 12:44:23.561 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-21 12:44:28.890 -07:00 [INF] User logged in with email: test@test.com, at "2026-03-21T19:44:28.8897489Z"
+2026-03-21 12:44:28.903 -07:00 [INF] HTTP POST /login responded 200 in 1333.3940 ms
+2026-03-21 12:44:47.362 -07:00 [ERR] An error occurred while logging out.@IDX12709: CanReadToken() returned false. JWT is not well formed.
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-21 12:44:47.364 -07:00 [INF] HTTP POST /logout responded 200 in 22.6450 ms
+2026-03-21 12:45:29.252 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-21 12:45:29.280 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-21 12:45:29.437 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-21 12:45:29.438 -07:00 [INF] Hosting environment: Development
+2026-03-21 12:45:29.439 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-21 12:45:33.490 -07:00 [INF] User logged in with email: test@test.com, at "2026-03-21T19:45:33.4903743Z"
+2026-03-21 12:45:33.504 -07:00 [INF] HTTP POST /login responded 200 in 1350.7368 ms
+2026-03-21 12:45:43.621 -07:00 [ERR] An error occurred while logging out.@IDX12709: CanReadToken() returned false. JWT is not well formed.
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-21 12:45:43.624 -07:00 [INF] HTTP POST /logout responded 400 in 25.1994 ms
+2026-03-21 12:47:14.839 -07:00 [INF] Application is shutting down...
+2026-03-21 12:47:27.964 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-21 12:47:27.991 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-21 12:47:28.146 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-21 12:47:28.146 -07:00 [INF] Hosting environment: Development
+2026-03-21 12:47:28.147 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-21 12:47:31.094 -07:00 [INF] HTTP GET /scalar/ responded 200 in 129.6127 ms
+2026-03-21 12:47:31.134 -07:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 8.7867 ms
+2026-03-21 12:47:31.150 -07:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 24.6946 ms
+2026-03-21 12:47:31.408 -07:00 [INF] HTTP GET /openapi/v1.json responded 200 in 25.3053 ms
+2026-03-21 12:47:55.295 -07:00 [INF] User logged in with email: test@test.com, at "2026-03-21T19:47:55.2949230Z"
+2026-03-21 12:47:55.302 -07:00 [INF] HTTP POST /login responded 200 in 1176.7540 ms
+2026-03-21 12:48:04.917 -07:00 [ERR] An error occurred while logging out.@IDX12709: CanReadToken() returned false. JWT is not well formed.
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-21 12:48:04.919 -07:00 [INF] HTTP POST /logout responded 400 in 14.7188 ms
+2026-03-21 15:05:46.941 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-21 15:05:46.975 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-21 15:05:47.165 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-21 15:05:47.166 -07:00 [INF] Hosting environment: Development
+2026-03-21 15:05:47.166 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-21 15:05:51.556 -07:00 [INF] HTTP GET /orders responded 401 in 125.9178 ms
+2026-03-21 15:05:57.677 -07:00 [INF] User logged in with email: test@test.com, at "2026-03-21T22:05:57.6771717Z"
+2026-03-21 15:05:57.692 -07:00 [INF] HTTP POST /login responded 200 in 2053.5344 ms
+2026-03-21 15:06:10.360 -07:00 [INF] HTTP GET /orders responded 200 in 201.5963 ms
+2026-03-21 15:06:53.829 -07:00 [INF] HTTP POST /logout responded 400 in 38.7360 ms
+2026-03-21 15:07:05.588 -07:00 [INF] HTTP POST /logout responded 400 in 5.2020 ms
+2026-03-21 15:07:52.080 -07:00 [INF] Application is shutting down...
+2026-03-21 15:12:06.107 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-21 15:12:06.136 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-21 15:12:06.311 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-21 15:12:06.312 -07:00 [INF] Hosting environment: Development
+2026-03-21 15:12:06.312 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-21 15:12:08.779 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+API.Controllers.OrderController.GetOrdersByStatusAsync (API)
+API.Controllers.OrderController.GetAllOrdersAsync (API)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-03-21 15:13:24.984 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-21 15:13:25.010 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-21 15:13:25.164 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-21 15:13:25.165 -07:00 [INF] Hosting environment: Development
+2026-03-21 15:13:25.165 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-21 15:13:37.395 -07:00 [INF] HTTP GET /orders responded 400 in 182.0551 ms
+2026-03-21 15:13:45.018 -07:00 [INF] User logged in with email: test@test.com, at "2026-03-21T22:13:45.0176879Z"
+2026-03-21 15:13:45.024 -07:00 [INF] HTTP POST /login responded 200 in 1127.0384 ms
+2026-03-21 15:13:54.401 -07:00 [INF] HTTP GET /orders responded 400 in 13.5535 ms
+2026-03-21 15:14:09.569 -07:00 [INF] HTTP GET /orders responded 400 in 6.5952 ms
+2026-03-21 15:18:58.206 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-21 15:18:58.232 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-21 15:18:58.392 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-21 15:18:58.393 -07:00 [INF] Hosting environment: Development
+2026-03-21 15:18:58.394 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-21 15:19:09.569 -07:00 [INF] HTTP GET /orders responded 200 in 1178.8517 ms
+2026-03-21 15:39:07.242 -07:00 [INF] Application is shutting down...
+2026-03-21 21:58:16.751 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-21 21:58:16.780 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-21 21:58:16.952 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-21 21:58:16.953 -07:00 [INF] Hosting environment: Development
+2026-03-21 21:58:16.953 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-21 21:58:19.443 -07:00 [INF] HTTP GET /scalar responded 302 in 41.8674 ms
+2026-03-21 21:58:19.570 -07:00 [INF] HTTP GET /scalar/ responded 200 in 108.3856 ms
+2026-03-21 21:58:19.612 -07:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 13.8373 ms
+2026-03-21 21:58:19.631 -07:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 32.7774 ms
+2026-03-21 21:58:19.905 -07:00 [INF] HTTP GET /openapi/v1.json responded 200 in 25.2002 ms
+2026-03-21 21:59:06.824 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-21 21:59:06.851 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-21 21:59:07.012 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-21 21:59:07.013 -07:00 [INF] Hosting environment: Development
+2026-03-21 21:59:07.013 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-21 21:59:11.106 -07:00 [INF] HTTP GET /scalar/ responded 200 in 135.0808 ms
+2026-03-21 21:59:11.137 -07:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 8.0956 ms
+2026-03-21 21:59:11.153 -07:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 24.2357 ms
+2026-03-21 21:59:11.425 -07:00 [INF] HTTP GET /openapi/v1.json responded 200 in 25.3502 ms
+2026-03-21 21:59:24.853 -07:00 [INF] User logged in with email: test@test.com, at "2026-03-22T04:59:24.8525207Z"
+2026-03-21 21:59:24.860 -07:00 [INF] HTTP POST /login responded 200 in 1707.3501 ms
+2026-03-21 22:00:17.254 -07:00 [INF] HTTP POST /Product/create responded 401 in 7.2171 ms
+2026-03-21 22:00:26.944 -07:00 [INF] HTTP POST /Product/create responded 401 in 1.4291 ms
+2026-03-21 22:00:31.685 -07:00 [INF] HTTP POST /Product/create responded 401 in 1.7435 ms
+2026-03-21 22:06:39.163 -07:00 [FTL] Application startup exception
+System.InvalidOperationException: Scheme already exists: Bearer
+   at Microsoft.AspNetCore.Authentication.AuthenticationOptions.AddScheme(String name, Action`1 configureBuilder)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Authentication.AuthenticationSchemeProvider..ctor(IOptions`1 options, IDictionary`2 schemes)
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Constructor(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2026-03-21 22:06:39.205 -07:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Scheme already exists: Bearer
+   at Microsoft.AspNetCore.Authentication.AuthenticationOptions.AddScheme(String name, Action`1 configureBuilder)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Authentication.AuthenticationSchemeProvider..ctor(IOptions`1 options, IDictionary`2 schemes)
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Constructor(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-03-21 22:06:55.254 -07:00 [FTL] Application startup exception
+System.InvalidOperationException: Scheme already exists: Bearer
+   at Microsoft.AspNetCore.Authentication.AuthenticationOptions.AddScheme(String name, Action`1 configureBuilder)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Authentication.AuthenticationSchemeProvider..ctor(IOptions`1 options, IDictionary`2 schemes)
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Constructor(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2026-03-21 22:06:55.288 -07:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Scheme already exists: Bearer
+   at Microsoft.AspNetCore.Authentication.AuthenticationOptions.AddScheme(String name, Action`1 configureBuilder)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Authentication.AuthenticationSchemeProvider..ctor(IOptions`1 options, IDictionary`2 schemes)
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Constructor(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-03-21 22:07:18.071 -07:00 [FTL] Application startup exception
+System.InvalidOperationException: Scheme already exists: Bearer
+   at Microsoft.AspNetCore.Authentication.AuthenticationOptions.AddScheme(String name, Action`1 configureBuilder)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Authentication.AuthenticationSchemeProvider..ctor(IOptions`1 options, IDictionary`2 schemes)
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Constructor(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2026-03-21 22:07:18.106 -07:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Scheme already exists: Bearer
+   at Microsoft.AspNetCore.Authentication.AuthenticationOptions.AddScheme(String name, Action`1 configureBuilder)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Authentication.AuthenticationSchemeProvider..ctor(IOptions`1 options, IDictionary`2 schemes)
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Constructor(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-03-21 22:25:46.413 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-21 22:25:46.441 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-21 22:25:46.605 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-21 22:25:46.606 -07:00 [INF] Hosting environment: Development
+2026-03-21 22:25:46.607 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-21 22:26:29.667 -07:00 [INF] User logged in with email: test@test.com, at "2026-03-22T05:26:29.6668937Z"
+2026-03-21 22:26:29.683 -07:00 [INF] HTTP POST /login responded 200 in 1627.4956 ms

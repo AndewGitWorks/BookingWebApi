@@ -10,7 +10,7 @@ namespace API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class UserController
+    public class UserController : ControllerBase
     {
         private readonly IUserDbInterface _userInterface;
         private readonly IOrderInterface _orderInterface;

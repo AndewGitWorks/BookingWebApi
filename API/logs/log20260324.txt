@@ -1,0 +1,66 @@
+2026-03-24 02:49:57.285 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-24 02:49:57.324 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-24 02:49:57.543 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-24 02:49:57.544 -07:00 [INF] Hosting environment: Development
+2026-03-24 02:49:57.545 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-24 02:50:11.376 -07:00 [INF] HTTP GET /product/catalog responded 200 in 1584.5172 ms
+2026-03-24 02:50:11.440 -07:00 [INF] HTTP GET /product/catalog responded 200 in 59.6838 ms
+2026-03-24 02:52:25.766 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-24 02:52:25.795 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-24 02:52:25.966 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-24 02:52:25.966 -07:00 [INF] Hosting environment: Development
+2026-03-24 02:52:25.967 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-24 02:53:39.283 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-24 02:53:39.313 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-24 02:53:39.352 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-24 02:53:39.352 -07:00 [INF] Hosting environment: Development
+2026-03-24 02:53:39.353 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-24 02:54:00.466 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-24 02:54:00.492 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-24 02:54:00.645 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-24 02:54:00.645 -07:00 [INF] Hosting environment: Development
+2026-03-24 02:54:00.646 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-24 02:54:07.702 -07:00 [INF] HTTP GET /product/catalog responded 200 in 1097.9349 ms
+2026-03-24 02:54:07.765 -07:00 [INF] HTTP GET /product/catalog responded 200 in 59.3400 ms
+2026-03-24 02:55:24.785 -07:00 [INF] HTTP GET /scalar/ responded 200 in 123.1477 ms
+2026-03-24 02:55:24.824 -07:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 8.8815 ms
+2026-03-24 02:55:24.844 -07:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 29.3708 ms
+2026-03-24 02:55:25.090 -07:00 [INF] HTTP GET /openapi/v1.json responded 200 in 17.3701 ms
+2026-03-24 02:56:02.204 -07:00 [INF] User logged in with email: test@test.com, at "2026-03-24T09:56:02.2037086Z"
+2026-03-24 02:56:02.207 -07:00 [INF] HTTP POST /login responded 200 in 241.2926 ms
+2026-03-24 02:56:54.444 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-24 02:56:54.470 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-24 02:56:54.625 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-24 02:56:54.626 -07:00 [INF] Hosting environment: Development
+2026-03-24 02:56:54.627 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-24 02:56:59.042 -07:00 [INF] Application is shutting down...
+2026-03-24 02:57:01.822 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-24 02:57:01.849 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-24 02:57:02.002 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-24 02:57:02.003 -07:00 [INF] Hosting environment: Development
+2026-03-24 02:57:02.004 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-24 02:57:04.014 -07:00 [INF] HTTP GET /scalar/ responded 200 in 126.7876 ms
+2026-03-24 02:57:04.081 -07:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 7.1053 ms
+2026-03-24 02:57:04.092 -07:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 18.4066 ms
+2026-03-24 02:57:04.372 -07:00 [INF] HTTP GET /openapi/v1.json responded 200 in 23.3006 ms
+2026-03-24 02:57:23.861 -07:00 [INF] User logged in with email: test@test.com, at "2026-03-24T09:57:23.8609888Z"
+2026-03-24 02:57:23.868 -07:00 [INF] HTTP POST /login responded 200 in 1153.9527 ms
+2026-03-24 03:00:02.549 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-24 03:00:02.576 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-24 03:00:02.731 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-24 03:00:02.732 -07:00 [INF] Hosting environment: Development
+2026-03-24 03:00:02.732 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-24 03:00:09.546 -07:00 [INF] HTTP GET /scalar/ responded 200 in 131.5545 ms
+2026-03-24 03:00:09.599 -07:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 7.3970 ms
+2026-03-24 03:00:09.612 -07:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 20.8477 ms
+2026-03-24 03:00:09.904 -07:00 [INF] HTTP GET /openapi/v1.json responded 200 in 24.0358 ms
+2026-03-24 03:00:26.214 -07:00 [INF] User logged in with email: test@test.com, at "2026-03-24T10:00:26.2144542Z"
+2026-03-24 03:00:26.221 -07:00 [INF] HTTP POST /login responded 200 in 1158.8670 ms
+2026-03-24 03:01:15.848 -07:00 [INF] Now listening on: https://localhost:7115
+2026-03-24 03:01:15.874 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-24 03:01:16.027 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-24 03:01:16.027 -07:00 [INF] Hosting environment: Development
+2026-03-24 03:01:16.028 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-24 03:01:33.907 -07:00 [INF] User logged in with email: test@test.com, at "2026-03-24T10:01:33.9065379Z"
+2026-03-24 03:01:33.918 -07:00 [INF] HTTP POST /login responded 200 in 1163.3925 ms
+2026-03-24 03:01:43.147 -07:00 [INF] Application is shutting down...

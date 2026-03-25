@@ -4,6 +4,7 @@ using Application.Services;
 using Infrastructure.Auth;
 using Infrastructure.CrudRepository;
 using Infrastructure.Persistance;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 using Serilog;
@@ -20,6 +21,15 @@ builder.Services.ServicesRegistration();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
 });
 builder.Services.AddScoped<JwtService>();
 builder.Services.AddAuth(builder.Configuration);
@@ -39,6 +49,8 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference();
     app.MapOpenApi();
 }
+
+app.UseCors("AllowAll");
 
 app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();

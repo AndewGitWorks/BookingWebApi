@@ -1,0 +1,172 @@
+2026-03-19 20:13:09.147 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-19 20:13:09.178 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-19 20:13:09.178 -07:00 [INF] Hosting environment: Development
+2026-03-19 20:13:09.179 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-19 20:13:11.425 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-19 20:13:11.464 -07:00 [INF] HTTP GET / responded 404 in 39.5458 ms
+2026-03-19 20:13:16.038 -07:00 [INF] HTTP GET /scalar/ responded 200 in 150.5118 ms
+2026-03-19 20:13:16.090 -07:00 [INF] HTTP GET /scalar/scalar.aspnetcore.js responded 200 in 14.6590 ms
+2026-03-19 20:13:16.106 -07:00 [INF] HTTP GET /scalar/scalar.js responded 200 in 30.0129 ms
+2026-03-19 20:13:17.657 -07:00 [INF] HTTP GET /openapi/v1.json responded 200 in 167.2312 ms
+2026-03-19 20:13:35.299 -07:00 [INF] User logged in with email: test@test.com
+2026-03-19 20:13:35.303 -07:00 [INF] HTTP POST /login responded 200 in 1673.6814 ms
+2026-03-19 20:22:04.632 -07:00 [INF] Application is shutting down...
+2026-03-19 20:24:26.097 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-19 20:24:26.128 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-19 20:24:26.129 -07:00 [INF] Hosting environment: Development
+2026-03-19 20:24:26.129 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-19 20:24:30.041 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-19 20:24:30.126 -07:00 [INF] HTTP POST /auth/login responded 404 in 86.0740 ms
+2026-03-19 20:25:33.977 -07:00 [INF] HTTP POST /auth/login responded 404 in 1.5485 ms
+2026-03-19 20:26:02.047 -07:00 [INF] User logged in with email: test@test.com
+2026-03-19 20:26:02.053 -07:00 [INF] HTTP POST /login responded 200 in 1140.3769 ms
+2026-03-19 20:27:15.731 -07:00 [INF] Application is shutting down...
+2026-03-19 20:27:21.338 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-19 20:27:21.368 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-19 20:27:21.369 -07:00 [INF] Hosting environment: Development
+2026-03-19 20:27:21.369 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-19 20:27:26.987 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-19 20:27:28.171 -07:00 [INF] User logged in with email: test@test.com
+2026-03-19 20:27:28.192 -07:00 [INF] HTTP POST /login responded 200 in 1205.0601 ms
+2026-03-19 20:27:45.310 -07:00 [INF] Application is shutting down...
+2026-03-19 20:47:48.876 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-19 20:47:48.910 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-19 20:47:48.911 -07:00 [INF] Hosting environment: Development
+2026-03-19 20:47:48.912 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-19 20:47:53.112 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-19 20:47:53.318 -07:00 [INF] HTTP GET /orders responded 400 in 207.3348 ms
+2026-03-19 20:48:22.724 -07:00 [INF] HTTP GET /orders responded 400 in 15.1579 ms
+2026-03-19 21:06:54.295 -07:00 [INF] Application is shutting down...
+2026-03-19 21:07:05.700 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-19 21:07:05.740 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-19 21:07:05.741 -07:00 [INF] Hosting environment: Development
+2026-03-19 21:07:05.742 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-19 21:07:30.662 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-19 21:07:31.923 -07:00 [INF] User logged in with email: test@test.com
+2026-03-19 21:07:31.935 -07:00 [INF] HTTP POST /login responded 200 in 1273.8110 ms
+2026-03-19 21:07:45.111 -07:00 [INF] HTTP GET /orders responded 400 in 32.1951 ms
+2026-03-19 21:08:56.704 -07:00 [INF] Application is shutting down...
+2026-03-19 21:09:34.729 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-19 21:09:34.759 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-19 21:09:34.760 -07:00 [INF] Hosting environment: Development
+2026-03-19 21:09:34.761 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-19 21:09:47.514 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-19 21:09:47.608 -07:00 [INF] HTTP GET /orders responded 401 in 93.3555 ms
+2026-03-19 21:12:13.370 -07:00 [INF] HTTP GET /orders responded 401 in 5.1362 ms
+2026-03-19 21:12:35.122 -07:00 [INF] HTTP GET /orders responded 401 in 10.4008 ms
+2026-03-19 21:15:47.858 -07:00 [INF] Application is shutting down...
+2026-03-19 21:15:54.098 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-19 21:15:54.129 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-19 21:15:54.130 -07:00 [INF] Hosting environment: Development
+2026-03-19 21:15:54.130 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-19 21:15:58.715 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-19 21:15:58.805 -07:00 [INF] HTTP GET /orders responded 401 in 91.7066 ms
+2026-03-19 21:16:04.741 -07:00 [INF] HTTP GET /orders responded 401 in 6.4745 ms
+2026-03-19 21:16:08.131 -07:00 [INF] HTTP GET /orders responded 401 in 1.9652 ms
+2026-03-19 21:16:12.076 -07:00 [INF] Application is shutting down...
+2026-03-19 21:18:32.660 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-19 21:18:32.693 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-19 21:18:32.694 -07:00 [INF] Hosting environment: Development
+2026-03-19 21:18:32.695 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-19 21:18:37.587 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-19 21:18:37.660 -07:00 [INF] HTTP GET /orders responded 401 in 73.5464 ms
+2026-03-19 21:18:42.821 -07:00 [INF] HTTP GET /orders responded 401 in 5.3944 ms
+2026-03-19 21:19:20.930 -07:00 [INF] Application is shutting down...
+2026-03-19 21:20:14.673 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-19 21:20:14.710 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-19 21:20:14.711 -07:00 [INF] Hosting environment: Development
+2026-03-19 21:20:14.712 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-19 21:20:19.018 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-19 21:20:19.094 -07:00 [INF] HTTP GET /orders responded 401 in 75.9857 ms
+2026-03-19 21:20:29.944 -07:00 [INF] User logged in with email: test@test.com
+2026-03-19 21:20:29.954 -07:00 [INF] HTTP POST /login responded 200 in 1189.5315 ms
+2026-03-19 21:20:56.378 -07:00 [INF] HTTP GET /orders responded 200 in 236.6585 ms
+2026-03-19 21:21:36.078 -07:00 [INF] HTTP GET /orders responded 200 in 29.5756 ms
+2026-03-19 21:24:44.359 -07:00 [INF] Application is shutting down...
+2026-03-19 21:24:53.334 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-19 21:24:53.364 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-19 21:24:53.365 -07:00 [INF] Hosting environment: Development
+2026-03-19 21:24:53.366 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-19 21:25:11.771 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-19 21:25:13.037 -07:00 [INF] HTTP GET /orders responded 200 in 1266.3728 ms
+2026-03-19 21:34:38.162 -07:00 [INF] Application is shutting down...
+2026-03-19 21:34:44.520 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-19 21:34:44.555 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-19 21:34:44.555 -07:00 [INF] Hosting environment: Development
+2026-03-19 21:34:44.556 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-19 21:34:47.937 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-19 21:34:48.029 -07:00 [INF] HTTP GET /orders responded 401 in 93.1735 ms
+2026-03-19 21:35:01.195 -07:00 [INF] User logged in with email: test@test.com
+2026-03-19 21:35:01.204 -07:00 [INF] HTTP POST /login responded 200 in 1231.5900 ms
+2026-03-19 21:35:16.947 -07:00 [INF] HTTP GET /orders responded 200 in 244.5054 ms
+2026-03-19 21:35:41.717 -07:00 [INF] HTTP GET /orders responded 200 in 22.1240 ms
+2026-03-19 21:35:51.408 -07:00 [ERR] HTTP GET /orders responded 500 in 9.0676 ms
+System.Collections.Generic.KeyNotFoundException: No orders found
+   at Infrastructure.CrudRepository.OrderRepository.GetOrdersByStatusAsync(Guid userId, OrderStatus status, CancellationToken token) in C:\Users\usr\source\repos\Booking\Infrastructure\CrudRepository\OrderRepository.cs:line 86
+   at Application.Services.OrderService.GetOrdersByStatusAsync(String token, String status, CancellationToken cancellationToken) in C:\Users\usr\source\repos\Booking\Application\Services\OrderService.cs:line 117
+   at API.Controllers.OrderController.GetOrdersByStatusAsync(String status, CancellationToken cancellationToken) in C:\Users\usr\source\repos\Booking\API\Controllers\OrderController.cs:line 98
+   at lambda_method56(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-03-19 21:35:51.439 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: No orders found
+   at Infrastructure.CrudRepository.OrderRepository.GetOrdersByStatusAsync(Guid userId, OrderStatus status, CancellationToken token) in C:\Users\usr\source\repos\Booking\Infrastructure\CrudRepository\OrderRepository.cs:line 86
+   at Application.Services.OrderService.GetOrdersByStatusAsync(String token, String status, CancellationToken cancellationToken) in C:\Users\usr\source\repos\Booking\Application\Services\OrderService.cs:line 117
+   at API.Controllers.OrderController.GetOrdersByStatusAsync(String status, CancellationToken cancellationToken) in C:\Users\usr\source\repos\Booking\API\Controllers\OrderController.cs:line 98
+   at lambda_method56(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-03-19 21:41:35.406 -07:00 [INF] Application is shutting down...
+2026-03-19 21:45:49.712 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-19 21:45:49.742 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-19 21:45:49.743 -07:00 [INF] Hosting environment: Development
+2026-03-19 21:45:49.744 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-19 21:45:53.195 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-19 21:45:54.500 -07:00 [INF] User logged in with email: test@test.com
+2026-03-19 21:45:54.512 -07:00 [INF] HTTP POST /login responded 200 in 1318.9277 ms
+2026-03-19 21:45:56.640 -07:00 [INF] HTTP GET /orders responded 401 in 8.7007 ms
+2026-03-19 21:46:04.842 -07:00 [INF] HTTP GET /orders responded 401 in 3.0796 ms
+2026-03-19 21:46:12.936 -07:00 [INF] HTTP GET /orders responded 401 in 1.3185 ms
+2026-03-19 21:46:18.954 -07:00 [INF] User logged in with email: test@test.com
+2026-03-19 21:46:18.956 -07:00 [INF] HTTP POST /login responded 200 in 113.4776 ms
+2026-03-19 21:46:30.297 -07:00 [INF] HTTP GET /orders responded 200 in 89.6741 ms
+2026-03-19 21:46:40.010 -07:00 [INF] HTTP GET /orders responded 200 in 3.9913 ms
+2026-03-19 21:47:34.731 -07:00 [INF] Application is shutting down...
+2026-03-19 21:47:41.360 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-19 21:47:41.390 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-19 21:47:41.390 -07:00 [INF] Hosting environment: Development
+2026-03-19 21:47:41.391 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-19 21:47:46.048 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-19 21:47:47.287 -07:00 [INF] User logged in with email: test@test.com
+2026-03-19 21:47:47.300 -07:00 [INF] HTTP POST /login responded 200 in 1252.7642 ms
+2026-03-19 21:47:53.368 -07:00 [INF] HTTP GET /orders responded 200 in 125.2202 ms
+2026-03-19 21:47:59.045 -07:00 [INF] HTTP GET /orders responded 200 in 36.8002 ms
+2026-03-19 21:49:16.543 -07:00 [INF] Application is shutting down...
+2026-03-19 21:49:27.857 -07:00 [INF] Now listening on: http://localhost:5215
+2026-03-19 21:49:27.889 -07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-19 21:49:27.890 -07:00 [INF] Hosting environment: Development
+2026-03-19 21:49:27.890 -07:00 [INF] Content root path: C:\Users\usr\source\repos\Booking\API
+2026-03-19 21:49:31.775 -07:00 [WRN] Failed to determine the https port for redirect.
+2026-03-19 21:49:32.982 -07:00 [INF] HTTP GET /orders responded 200 in 1206.1108 ms
+2026-03-19 21:49:47.618 -07:00 [INF] Application is shutting down...
