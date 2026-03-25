@@ -45,7 +45,7 @@ namespace Infrastructure.CrudRepository
             await _context.SaveChangesAsync(token);
         }
 
-        public async Task<List<OrdersListResponse>> GetByUser(Guid id, CancellationToken token)
+        public async Task<OrdersListResponse> GetByUser(Guid id, CancellationToken token)
         {
             return await _context.Orders
                 .Where(x => x.UserId == id)
@@ -62,7 +62,7 @@ namespace Infrastructure.CrudRepository
                         UnitPrice = i.UnitPrice
                     }).ToList()
                 ))
-             .ToListAsync();
+             .FirstOrDefaultAsync(token) ?? throw new KeyNotFoundException("No orders found");
         }
 
         public async Task<Order?> GetDraftOrderAsync(Guid id, CancellationToken token)
@@ -79,6 +79,19 @@ namespace Infrastructure.CrudRepository
                 .ThenInclude(p => p.Product)
                 .FirstOrDefaultAsync(i => i.Id == id)
                 ?? throw new KeyNotFoundException("Order not found");
+        }
+
+        public async Task<List<OrderResponse>> GetOrdersByStatusAsync(Guid userId, OrderStatus status, CancellationToken token)
+        {
+            return await _context.Orders
+                .Where(o => o.UserId == userId && (int)o.Status == (int)status)
+                .Select(i => new OrderResponse
+                {
+                    Id = i.Id,
+                    CreatedAt = i.CreatedAt,
+                    Status = Enum.GetName<OrderStatus>(i.Status)!.ToString() ?? "Status not reliable",
+                })
+                .ToListAsync(token) ?? throw new KeyNotFoundException("No orders found with the specified status");
         }
 
         public async Task SaveChangesAsync(CancellationToken ct)
